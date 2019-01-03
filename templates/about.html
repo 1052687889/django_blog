@@ -1,10 +1,56 @@
 {% extends "base.html" %}
-
+{% load staticfiles %}
 
 {% block title %}
     关于
 {% endblock %}
+
+{% block other %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+
 {% block content %}
-    关于说明
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+        <br>
+        <div class="shadow-lg p-3 mb-5 bg-white rounded">
+            <img id="head_img" src="{% static 'image/head.jpg' %}" alt="" class="rounded mx-auto d-block">
+            <hr>
+            <div class="row">
+                <div class="col-2"></div>
+
+                <div class="col-8">
+                    <h3>技能树</h3>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 2%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <br>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <br>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <br>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 45%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <br>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <br>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                <div class="col-2"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-2"></div>
+</div>
 {% endblock %}
 

@@ -31,7 +31,6 @@ class Article(models.Model):
     '''
     博客文章
     '''
-    # id = models.AutoField()
     title = models.CharField('博客标题',max_length=100)
     content = models.TextField('博客内容')
     author = models.CharField('作者',max_length=30)
