@@ -5,7 +5,6 @@ from datetime import datetime
 
 from django.db import models
 
-
 class Tag(models.Model):
     '''
     博客标签

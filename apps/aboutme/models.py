@@ -4,7 +4,7 @@ from django.db import models
 from django.db import models
 
 class Skill(models.Model):
-    name = models.CharField('名称',max_length=20,default='')
+    name = models.CharField('名称',max_length=20,null=True,default='Python')
     class Meta:
         verbose_name="技能"
         verbose_name_plural=verbose_name
@@ -26,7 +26,7 @@ class MyInfo(models.Model):
     describe = models.TextField('自我描述',null=True)
     resume = models.URLField('简历',max_length=200,null=True)
 
-    skills = models.ManyToManyField(Skill,verbose_name='技能',through='Level')
+    # skills = models.ManyToManyField(Skill,verbose_name='技能',through='Level')
 
     zh_name_useful = models.BooleanField('中文名字是否有效',default=True)
     net_name_useful = models.BooleanField('网名是否有效',default=True)
