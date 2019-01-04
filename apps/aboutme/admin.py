@@ -20,11 +20,6 @@ class MyInfoAdmin(object):
                     'skills',
                     ]
 
-    # def formfield_for_dbfield(self,db_field,**kwargs):
-    #     if db_field == "skills":
-    #         kwargs['queryset'] = Skill.objects.all()
-    #         return super(MyInfoAdmin,self).formfield_for_dbfield(db_field,**kwargs)
-
 class SkillAdmin(object):
     list_display = ["name",]
 

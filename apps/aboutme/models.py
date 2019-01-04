@@ -4,11 +4,14 @@ from django.db import models
 from django.db import models
 
 class Skill(models.Model):
-    name = models.CharField('名称',max_length=20,null=True,default='Python')
+    name = models.CharField('名称',max_length=20,null=True,default='')
+
     class Meta:
         verbose_name="技能"
         verbose_name_plural=verbose_name
 
+    def __str__(self):
+        return self.name
 
 
 class MyInfo(models.Model):
@@ -16,17 +19,17 @@ class MyInfo(models.Model):
     zh_name = models.CharField('中文名',max_length=10,null=False,default='黄晔')
     net_name = models.CharField('网名',max_length=10,null=True,default='饕客')
     en_name = models.CharField('英文名',max_length=30,null=True,default='Tate')
-    head_img = models.ImageField('头像', upload_to='img/%Y/%m/%d', null=False, default='')
+    head_img = models.ImageField('头像', upload_to='img/%Y/%m/%d', null=False, default='',blank=True)
     age = models.IntegerField('年龄',default=0)
     sex = models.CharField('性别',max_length=10,null=True,choices=(('male','男'),('female','女')),default='male')
     phone = models.CharField('电话号码',max_length=30,null=True)
     email = models.EmailField('邮箱',null=True)
     addr = models.CharField('地址',max_length=300,null=True)
-    wechat = models.CharField('微信',max_length=100,null=True)
+    wechat = models.ImageField('微信',upload_to='img/%Y/%m/%d', null=False, default='',blank=True)
     describe = models.TextField('自我描述',null=True)
     resume = models.URLField('简历',max_length=200,null=True)
 
-    # skills = models.ManyToManyField(Skill,verbose_name='技能',through='Level')
+    skills = models.ManyToManyField(Skill,verbose_name='技能',through='Level')
 
     zh_name_useful = models.BooleanField('中文名字是否有效',default=True)
     net_name_useful = models.BooleanField('网名是否有效',default=True)
@@ -45,6 +48,9 @@ class MyInfo(models.Model):
         verbose_name="关于我"
         verbose_name_plural=verbose_name
 
+    def __str__(self):
+        return self.zh_name
+
 
 class Level(models.Model):
 
@@ -55,8 +61,8 @@ class Level(models.Model):
         verbose_name="技能水平"
         verbose_name_plural=verbose_name
 
-
-
+    def __str__(self):
+        return str(self.myinfo) + ' ' + str(self.skill) + ' ' + str(self.score)
 
 
 

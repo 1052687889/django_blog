@@ -15,13 +15,13 @@ Including another URLconf
 """
 
 import xadmin
-from django.urls import path,re_path
-from .views import Home,About
-from .settings import MEDIA_ROOT  # 上传媒体加载包
-from django.views.static import serve  # 上传媒体加载包
+from django.urls import path,re_path,include
+from .views import Home
+from django.views.static import serve
+from .settings import MEDIA_ROOT
 urlpatterns = [
     path('xadmin/', xadmin.site.urls),
     path('',Home.as_view(),name='home'),
     re_path(r'media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
-    path('about/',About.as_view(),name='about')
+    path('about/',include('aboutme.urls'))
 ]

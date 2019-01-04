@@ -18,7 +18,6 @@ class Category(models.Model):
     """
     博客分类
     """
-    # id = models.AutoField()
     name=models.CharField('名称',max_length=30)
     class Meta:
         verbose_name="类别"
@@ -36,6 +35,7 @@ class Article(models.Model):
     create_time = models.DateTimeField('创建时间',auto_now_add=True)
     update_time = models.DateTimeField('更新时间',auto_now=True)
     tags = models.ManyToManyField(Tag,verbose_name='标签')
+    category = models.ForeignKey(Category,on_delete=models.CASCADE)
 
     class Meta:
         verbose_name="博客"
@@ -46,7 +46,6 @@ class Comment(models.Model):
     '''
     博客评论
     '''
-    # id = models.AutoField()
     blog=models.ForeignKey(Article,verbose_name='博客',on_delete=models.DO_NOTHING)#(博客--评论:一对多)
     name=models.CharField('称呼',max_length=16)
     email=models.EmailField('邮箱')

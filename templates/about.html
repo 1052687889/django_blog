@@ -1,12 +1,15 @@
 {% extends "base.html" %}
-{% load staticfiles %}
 
 {% block title %}
     关于
 {% endblock %}
 
+{% load staticfiles %}
+
 {% block other %}
-<link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/about.js' %}"></script>
 {% endblock %}
 
 {% block content %}
@@ -15,39 +18,60 @@
     <div class="col-8">
         <br>
         <div class="shadow-lg p-3 mb-5 bg-white rounded">
-            <img id="head_img" src="{% static 'image/head.jpg' %}" alt="" class="rounded mx-auto d-block">
-            <hr>
             <div class="row">
                 <div class="col-2"></div>
+                <div class="col-7">
+                    <h4>{{ myinfo.net_name }}&nbsp;- &nbsp;{{ myinfo.en_name }}{% if myinfo.sex == 'male' %}.sir{% endif %}</h4>
+                </div>
+                <div class="col-3">
+                    <img id="head_img" src="{{ media }}{{ myinfo.wechat }}" alt="" class="rounded float-lg-left d-block">
+                </div>
+            </div>
+
+            <hr>
+            <div class="row">
+                <div class="col-2">
+                    <h4 align="right">自我描述:</h4>
+                </div>
 
                 <div class="col-8">
-                    <h3>技能树</h3>
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 2%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <br>
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <br>
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <br>
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 45%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <br>
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <br>
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
+                    <p class="text-justify">{{ myinfo.describe }}</p>
                 </div>
                 <div class="col-2"></div>
             </div>
+            <br>
+            <div class="row">
+                <div class="col-2">
+                    <h4 align="right">技能树:</h4>
+                </div>
+
+                <div class="col-8">
+                {% for skill in skills %}
+                <div class="row">
+                    <div class="col-3">
+                        <h6 align="right">{{ skill.skill }}:</h6>
+                    </div>
+                    <div class="col-8">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: {{ skill.score }}%" aria-valuenow="{{ skill.score }}" aria-valuemin="0" aria-valuemax="100"></div>
+                            <h6>&nbsp;{{ skill.score }}%</h6>
+                        </div>
+                    </div>
+                    <div class="col-1">
+                    </div>
+                </div>
+                {% endfor %}
+
+                </div>
+                <div class="col-2"></div>
+            </div>
+            <hr>
+            <br>
+                <img id="zan_img" src="{% static 'image/zan.jpg' %}" onclick="zan_onclick()">
+
+            <p align="center">点个赞呗</p>
+
+            <br>
         </div>
     </div>
     <div class="col-2"></div>
