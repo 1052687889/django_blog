@@ -21,7 +21,10 @@ from django.views.static import serve
 from .settings import MEDIA_ROOT
 urlpatterns = [
     path('xadmin/', xadmin.site.urls),
-    path('',Home.as_view(),name='home'),
     re_path(r'media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
-    path('about/',include('aboutme.urls'))
+
+    path('',Home.as_view(),name='home'),
+    path('blog/', include('Article.urls')),
+    path('about/',include('aboutme.urls')),
+
 ]

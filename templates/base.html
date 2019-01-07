@@ -26,12 +26,12 @@
                 <a class="nav-link" href="{% url 'home' %}">首页<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown active">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">博客</a>
+                <a class="nav-link dropdown-toggle" href="{% url 'blog' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">博客</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                <a class="dropdown-item" href="{% url 'blog' %}">全部</a>
+                    {% for id,type in  article_types.items %}
+                        <a class="dropdown-item" href="{% url 'blog' %}category/{{ id }}">{{ type }}</a>
+                    {% endfor %}
                 </div>
             </li>
             <li class="nav-item active">
