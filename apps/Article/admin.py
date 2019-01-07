@@ -1,6 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
+import xadmin
 from .models import Tag,Category,Article,Comment
 
 class TagAdmin(object):
@@ -22,3 +23,8 @@ class ArticleAdmin(object):
 
 class CommentAdmin(object):
     list_display = ["name",]
+
+xadmin.site.register(Tag, TagAdmin)
+xadmin.site.register(Category, CategoryAdmin)
+xadmin.site.register(Article, ArticleAdmin)
+xadmin.site.register(Comment, CommentAdmin)

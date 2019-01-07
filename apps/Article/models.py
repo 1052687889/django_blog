@@ -14,6 +14,9 @@ class Tag(models.Model):
         verbose_name='标签'
         verbose_name_plural = verbose_name
 
+    def __str__(self):
+        return self.name
+
 class Category(models.Model):
     """
     博客分类
@@ -22,6 +25,9 @@ class Category(models.Model):
     class Meta:
         verbose_name="类别"
         verbose_name_plural=verbose_name
+
+    def __str__(self):
+        return self.name
 
 
 
@@ -35,12 +41,14 @@ class Article(models.Model):
     create_time = models.DateTimeField('创建时间',auto_now_add=True)
     update_time = models.DateTimeField('更新时间',auto_now=True)
     tags = models.ManyToManyField(Tag,verbose_name='标签')
-    category = models.ForeignKey(Category,on_delete=models.CASCADE)
+    category = models.ForeignKey(Category,verbose_name='分类',on_delete=models.CASCADE)
 
     class Meta:
         verbose_name="博客"
         verbose_name_plural=verbose_name
 
+    def __str__(self):
+        return self.title
 
 class Comment(models.Model):
     '''
@@ -55,6 +63,9 @@ class Comment(models.Model):
     class Meta:
         verbose_name="评论"
         verbose_name_plural="评论"
+
+    def __str__(self):
+        return self.name + ':' + self.name
 
 
 
