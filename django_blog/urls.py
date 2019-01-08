@@ -16,7 +16,7 @@ Including another URLconf
 
 import xadmin
 from django.urls import path,re_path,include
-from .views import Home
+from .views import Home,page_not_found
 from django.views.static import serve
 from .settings import MEDIA_ROOT
 urlpatterns = [
@@ -28,3 +28,4 @@ urlpatterns = [
     path('about/',include('aboutme.urls')),
 
 ]
+handler404 = 'page_not_found'

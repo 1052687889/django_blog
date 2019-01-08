@@ -123,3 +123,4 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+TAG_COLOR_LIST = ['primary','secondary','success','danger','warning','info','light','dark']
