@@ -4,19 +4,22 @@ __author__ = "taoke"
 __datetime__ = "18-12-30 18:22:11"
 
 from django.views import View
-from django.shortcuts import render,render_to_response
+from django.shortcuts import render
 
-from apps.Article.models import Category
-
+from apps.Article.models import Category,Article
+from django.db.models import Count
 class Home(View):
     def get(self, request):
-        categorys = Category.objects.all()
-        article_types = {category.id:category.name for category in categorys}
-        return render(request,'home.html',{'article_types':article_types})
+        context = {}
+        group = Article.objects.all().values('category', 'category__name').annotate(total=Count('category')).order_by(
+            'total')
+        context['group'] = [(category['category'], category['category__name'], category['total']) for category in group]
+        return render(request,'home.html',context)
 
 
 def page_not_found(request):
     context = {}
-    categorys = Category.objects.all()
-    context['article_types'] = {category.id: category.name for category in categorys}
+    group = Article.objects.all().values('category', 'category__name').annotate(total=Count('category')).order_by(
+        'total')
+    context['group'] = [(category['category'], category['category__name'], category['total']) for category in group]
     return render(request, '404.html', context=context)

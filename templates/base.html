@@ -29,8 +29,8 @@
                 <a class="nav-link dropdown-toggle" href="{% url 'blog' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">博客</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="{% url 'blog' %}">全部</a>
-                    {% for id,type in  article_types.items %}
-                        <a class="dropdown-item" href="{% url 'blog' %}category/{{ id }}">{{ type }}</a>
+                    {% for id,name,total in  group %}
+                        <a class="dropdown-item" href="{% url 'blog' %}category/{{ id }}">{{ name }}({{ total }})</a>
                     {% endfor %}
                 </div>
             </li>

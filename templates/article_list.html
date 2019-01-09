@@ -12,7 +12,7 @@
     <div class="col-1"></div>
 
     <div class="col-8" id="article_list">
-        <div class="card">
+        <div class="card shadow-lg">
           <h5 class="card-header">{{ type }}</h5>
           <div class="card-body" id="article_list_body">
           </div>
@@ -20,23 +20,54 @@
     </div>
 
     <div class="col-2" id="article_right">
-        <div class="card">
+        <div class="card shadow-lg">
           <h5 class="card-header">最新文章</h5>
           <div class="card-body">
                 {% for id,title in  new_article_list.items %}
-                        <h6>&nbsp;<a href="{% url 'blog' %}article/{{ id }}">{{ title }}</a></h6>
+                        <h5>&nbsp;<a href="{% url 'blog' %}article/{{ id }}"  class="badge">{{ title }}</a></h5>
                 {% endfor %}
           </div>
         </div>
         <br>
-        <div class="card">
+        <div class="card shadow-lg">
+          <h5 class="card-header">分类</h5>
+          <div class="card-body">
+              {% for id,name,total in  group %}
+                        <h5>&nbsp;<a href="{% url 'blog' %}category/{{ id }}"  class="badge">{{ name }}({{ total }})</a></h5>
+                {% endfor %}
+          </div>
+        </div>
+        <br>
+        <div class="card shadow-lg">
           <h5 class="card-header">标签</h5>
           <div class="card-body">
               {% for id,title_info in  tags.items %}
-                   <a href="{% url 'blog' %}tag/{{ id }}" class="badge badge-{{ title_info.1 }}">{{ title_info.0 }}</a>&nbsp;&nbsp;
+                   <a href="{% url 'blog' %}tag/{{ id }}/" class="badge badge-{{ title_info.1 }}">{{ title_info.0 }}</a>&nbsp;&nbsp;
               {% endfor %}
           </div>
         </div>
+    <br>
+    <div class="card shadow-lg">
+          <h5 class="card-header">归档</h5>
+          <div class="card-body">
+              {% for year,month,num in  date %}
+                  <h5><a href="{% url 'blog' %}date/{{ year }}/{{ month }}/" class="badge">{{ year }}-{{ month }}({{ num }})</a></h5>
+              {% endfor %}
+          </div>
+        </div>
+        <br>
+        <div class="card shadow-lg">
+          <h5 class="card-header">阅读排行榜</h5>
+          <div class="card-body">
+          </div>
+        </div>
+        <br>
+            <div class="card shadow-lg">
+          <h5 class="card-header">最新评论</h5>
+          <div class="card-body">
+          </div>
+        </div>
+    <br>
     </div>
     <div class="col-1"></div>
     <br><br><br>
