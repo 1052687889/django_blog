@@ -59,6 +59,9 @@
         <div class="card shadow-lg">
           <h5 class="card-header">阅读排行榜</h5>
           <div class="card-body">
+              {% for id,title,read_num in  read_num %}
+                  <h5><a href="{% url 'blog' %}article/{{ id }}" class="badge">{{ title }}({{ read_num }})</a></h5>
+              {% endfor %}
           </div>
         </div>
         <br>

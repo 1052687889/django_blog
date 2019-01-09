@@ -6,6 +6,7 @@
     <link rel="icon" href="{% static 'image/logo.jpg' %}" type="img/x-ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="{% static 'jquery/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/base.js' %}"></script>
     <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}"  crossorigin="anonymous">
@@ -41,6 +42,10 @@
                 <a class="nav-link" href="{% url 'about' %}">关于我<span class="sr-only">(current)</span></a>
             </li>
         </ul>
+      <form class="form-inline my-2 my-sm-0">
+        <button id="login" class="btn btn-sm btn-outline-success my-2 my-sm-0" type="button">登录</button>&nbsp;&nbsp;
+        <button id="register" class="btn btn-sm btn-outline-success my-2 my-sm-0" type="button">注册</button>
+      </form>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">查找</button>

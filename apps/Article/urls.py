@@ -14,6 +14,8 @@ urlpatterns = [
     path('loadArticle/',loadArticle.as_view()),
     path('category/<int:_id>/',category.as_view()),
     path('category/<int:_id>/loadArticle/',loadArticle.as_view()),
+    path('tag/<int:_id>/loadArticle/',loadArticle.as_view()),
+    path('date/<int:year>/<int:month>/loadArticle/', loadArticle.as_view()),
 ]
 
 

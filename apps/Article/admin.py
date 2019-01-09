@@ -11,7 +11,7 @@ class CategoryAdmin(object):
     list_display = ["name",]
 
 class ArticleAdmin(object):
-    list_display = ["title","author","create_time","update_time","tags","category"]
+    list_display = ["title","author","category","tags","read_num","create_time","update_time"]
 
 
 class CommentAdmin(object):

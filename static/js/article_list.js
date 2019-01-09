@@ -1,9 +1,15 @@
 LOAD_ARTICLE_NUM=10;
 LOAD_INDEX=0;
 LOAD_ARTICLE_END=false;
+TYPE='type';
+TAG='tag';
+DATE='date';
+link_type = get_link_type();
 
 window.onload=function (){
-    loadArticle(get_loadArticle_type(),LOAD_INDEX,LOAD_ARTICLE_NUM);
+    console.log(link_type);
+
+    loadArticle()
 }
 
 $(window).scroll(function(){
@@ -13,7 +19,7 @@ $(window).scroll(function(){
  if(scrollTop + clientHeight >= scrollHeight){   //距离顶部+当前高度 >=文档总高度 即代表滑动到底部
      console.log("滚动条到达底部");
      if(LOAD_ARTICLE_END==false && LOAD_INDEX != 0){
-         loadArticle(get_loadArticle_type(),LOAD_INDEX,LOAD_ARTICLE_NUM);
+         loadArticle();
      }
  }else if(scrollTop<=0){
 	 console.log("滚动条到达顶部")
@@ -34,6 +40,34 @@ String.prototype.Format = function (args) {
     return temp;
 }
 
+function get_link_type() {
+    try{
+        pathname = window.location.pathname;
+        if(pathname == "/blog/"){
+            return TYPE;
+        }
+        var re = new RegExp('/blog/category/([0-9]*?)/');
+        arr = re.exec(pathname);
+        if(arr[1])
+            return TYPE;
+    }catch(e){}
+
+    try{
+        var re = new RegExp('/blog/tag/([0-9]*?)/');
+        arr = re.exec(pathname);
+         if(arr[1])
+            return TAG
+    }catch(e){}
+
+    try{
+        var re = new RegExp('/blog/date/([0-9]*?)/([0-9]*?)/');
+        arr = re.exec(pathname);
+        console.log(arr);
+         if(arr[1])
+            return DATE
+    }catch(e){}
+}
+
 function get_loadArticle_type() {
   pathname = window.location.pathname;
   if(pathname == "/blog/"){
@@ -44,9 +78,62 @@ function get_loadArticle_type() {
       return arr[1]
   }
 }
+function get_loadArticle_tag() {
+  pathname = window.location.pathname;
+  try{
+      var re = new RegExp('/blog/tag/([0-9]*?)/');
+      arr = re.exec(pathname);
+      return arr[1]
+  }catch (e) {}
+}
+function get_loadArticle_year_month() {
+  pathname = window.location.pathname;
+  try{
+      var re = new RegExp('/blog/date/([0-9]*?)/([0-9]*?)/');
+      arr = re.exec(pathname);
+      return {'year':arr[1],'month':arr[2]}
+  }catch (e) {}
+}
+function parseParams(data) {
+    try {
+        var tempArr = [];
+        for (var i in data) {
+            var key = encodeURIComponent(i);
+            var value = encodeURIComponent(data[i]);
+            tempArr.push(key + '=' + value);
+        }
+        var urlParamsStr = tempArr.join('&');
+        return urlParamsStr;
+    } catch (err) {
+        return '';
+    }
+}
+function get_param() {
+    var param;
+    if(link_type==TYPE){
+        param={'link_type':link_type,
+                'type':get_loadArticle_type(),
+                'index':LOAD_INDEX,
+                'num':LOAD_ARTICLE_NUM};
 
-function loadArticle(type,index,num) {
-    console.log("loadArticle:"+type+' '+index+' '+num);
+    }else if(link_type==TAG){
+        param={ 'link_type':link_type,
+                'tag':get_loadArticle_tag(),
+                'index':LOAD_INDEX,
+                'num':LOAD_ARTICLE_NUM};
+    }else if(link_type==DATE){
+        d = get_loadArticle_year_month();
+        param={ 'link_type':link_type,
+                'year':d['year'],
+                'month':d['month'],
+                'index':LOAD_INDEX,
+                'num':LOAD_ARTICLE_NUM};
+    }
+    return param
+}
+function loadArticle() {
+    var param = get_param();
+    console.log("loadArticle:"+param);
   	var xmlhttp;
 	if (window.XMLHttpRequest) {
 		//  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
@@ -62,7 +149,8 @@ function loadArticle(type,index,num) {
             addArticleList(xmlhttp);
 		}
 	}
-	xmlhttp.open("GET", "loadArticle/?num="+num+"&type="+type+"&index="+index, true);
+	url = parseParams(param);
+	xmlhttp.open("GET", "loadArticle/?"+url, true);
 	xmlhttp.send();
 }
 
@@ -77,15 +165,15 @@ function addArticleList(response) {
         html='<div class="card" style="width: auto;">\
           <ul class="list-group list-group-flush">\
           <li class="list-group-item"><h4><a href="/blog/article/{id}">{title}</a></h4>\
-            author:{author}&nbsp;&nbsp;创建时间:{create_time}type:{type}<br>postCon:{postCon}&hellip;</li>\
+            author:{author}&nbsp;&nbsp;创建时间:{create_time}type:{type} tag:{tag}<br>postCon:{postCon}&hellip;</li>\
           </ul>\
         </div>\
         <br>';
     insertToArticleList(article_list,html);
     $("div#article_list").append("<br>");
     }
-
 }
+
 function insertToArticleList(article_list,html) {
     var temp = 0;
     var timer = setInterval(function(){
@@ -95,7 +183,7 @@ function insertToArticleList(article_list,html) {
          if(article_list.length <= temp){
              clearInterval(timer)
          }
-    },50)
+    },80)
 }
 
 
