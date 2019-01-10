@@ -2,17 +2,805 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a125b88f-508e-4096-b404-d8ba46b0c52a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/js/base.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/.tx/config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/adminx.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/filters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/layout.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/de_DE/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/de_DE/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/de_DE/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/de_DE/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/en/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/en/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/en/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/en/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/es_MX/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/es_MX/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/es_MX/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/es_MX/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/eu/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/eu/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/eu/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/eu/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/id_ID/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/id_ID/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/id_ID/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/id_ID/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/ja/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/ja/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/ja/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/ja/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/lt/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/lt/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/lt/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/lt/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/nl_NL/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/nl_NL/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/nl_NL/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/nl_NL/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/pl/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/pl/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/pl/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/pl/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/pt_BR/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/pt_BR/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/pt_BR/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/pt_BR/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/ru_RU/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/ru_RU/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/ru_RU/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/ru_RU/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/zh_Hans/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/zh_Hans/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/zh_Hans/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/locale/zh_Hans/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/migrations/0002_log.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/migrations/0003_auto_20160715_0100.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/plugins/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/plugins/actions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/plugins/aggregation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/plugins/ajax.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/plugins/auth.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/plugins/batch.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/plugins/bookmark.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/plugins/chart.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/plugins/comments.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/plugins/details.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/plugins/editable.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/plugins/export.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/plugins/filters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/plugins/images.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/plugins/importexport.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/plugins/inline.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/plugins/language.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/plugins/layout.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/plugins/mobile.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/plugins/multiselect.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/plugins/passwords.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/plugins/portal.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/plugins/quickfilter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/plugins/quickform.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/plugins/refresh.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/plugins/relate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/plugins/relfield.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/plugins/sitemenu.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/plugins/sortablelist.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/plugins/themes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/plugins/topnav.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/plugins/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/plugins/wizard.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/plugins/xversion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/sites.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/component.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/css/themes/bootstrap-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/css/themes/bootstrap-theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/css/themes/bootstrap-xadmin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/css/xadmin.form.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/css/xadmin.main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/css/xadmin.mobile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/css/xadmin.page.dashboard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/css/xadmin.plugin.aggregation.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/css/xadmin.plugin.formset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/css/xadmin.plugin.importexport.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/css/xadmin.plugin.quickfilter.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/css/xadmin.plugins.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/css/xadmin.responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/css/xadmin.widget.editable.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/css/xadmin.widget.select-transfer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/js/xadmin.main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/js/xadmin.page.dashboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/js/xadmin.page.form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/js/xadmin.page.list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/js/xadmin.plugin.actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/js/xadmin.plugin.batch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/js/xadmin.plugin.bookmark.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/js/xadmin.plugin.charts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/js/xadmin.plugin.details.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/js/xadmin.plugin.editable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/js/xadmin.plugin.filters.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/js/xadmin.plugin.formset.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/js/xadmin.plugin.importexport.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/js/xadmin.plugin.portal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/js/xadmin.plugin.quick-form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/js/xadmin.plugin.quickfilter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/js/xadmin.plugin.refresh.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/js/xadmin.plugin.revision.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/js/xadmin.plugin.sortablelist.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/js/xadmin.plugin.themes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/js/xadmin.responsive.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/js/xadmin.widget.datetime.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/js/xadmin.widget.multiselect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/js/xadmin.widget.select-transfer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/js/xadmin.widget.select.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/autotype/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/css/datepicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.bg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.cs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.da.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.el.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.es.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.fi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.he.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.hr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.hu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.id.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.is.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.it.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ja.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.kr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.lt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.lv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ms.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.nb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.pl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.pt-BR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.pt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.rs-latin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.rs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.sk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.sl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.sv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.sw.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.th.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.tr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.uk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.zh-CN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.zh-TW.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-image-gallery/css/bootstrap-image-gallery.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-image-gallery/css/bootstrap-image-gallery.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-image-gallery/img/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-image-gallery/js/bootstrap-image-gallery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-image-gallery/js/bootstrap-image-gallery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-modal/css/bootstrap-modal.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-modal/img/ajax-loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-modal/js/bootstrap-modal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-modal/js/bootstrap-modalmanager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-multiselect/css/bootstrap-multiselect.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-multiselect/js/bootstrap-multiselect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-timepicker/css/bootstrap-timepicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-timepicker/css/bootstrap-timepicker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-timepicker/js/bootstrap-timepicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap-timepicker/js/bootstrap-timepicker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/flot/excanvas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/flot/excanvas.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/flot/jquery.colorhelpers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/flot/jquery.flot.aggregate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/flot/jquery.flot.canvas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/flot/jquery.flot.categories.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/flot/jquery.flot.crosshair.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/flot/jquery.flot.errorbars.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/flot/jquery.flot.fillbetween.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/flot/jquery.flot.image.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/flot/jquery.flot.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/flot/jquery.flot.navigate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/flot/jquery.flot.pie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/flot/jquery.flot.resize.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/flot/jquery.flot.selection.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/flot/jquery.flot.stack.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/flot/jquery.flot.symbol.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/flot/jquery.flot.threshold.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/flot/jquery.flot.time.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/font-awesome/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/font-awesome/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/font-awesome/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.core.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.core.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.effect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.effect.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.mouse.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.mouse.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.sortable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.sortable.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.widget.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.widget.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/jquery/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/jquery/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/load-image/load-image.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/load-image/load-image.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/select2/select2-spinner.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/select2/select2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/select2/select2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/select2/select2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/select2/select2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/select2/select2_locale_de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/select2/select2_locale_en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/select2/select2_locale_es.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/select2/select2_locale_eu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/select2/select2_locale_fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/select2/select2_locale_hr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/select2/select2_locale_hu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/select2/select2_locale_it.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/select2/select2_locale_nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/select2/select2_locale_pt-BR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/select2/select2_locale_pt-PT.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/select2/select2_locale_ro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/select2/select2_locale_ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/select2/select2_locale_sk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/select2/select2_locale_sv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/select2/select2_locale_tr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/select2/select2_locale_ua.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/select2/select2_locale_zh-CN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/select2/select2_locale_zh-hans.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/select2/select2x2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/selectize/selectize.bootstrap2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/selectize/selectize.bootstrap3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/selectize/selectize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/selectize/selectize.default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/selectize/selectize.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/selectize/selectize.legacy.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/selectize/selectize.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/snapjs/snap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/snapjs/snap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/snapjs/snap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/500.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/auth/password_reset/complete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/auth/password_reset/confirm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/auth/password_reset/done.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/auth/password_reset/email.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/auth/password_reset/form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/auth/user/add_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/auth/user/change_password.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/base_site.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/blocks/comm.top.setlang.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/blocks/comm.top.theme.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/blocks/comm.top.topnav.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/blocks/modal_list.left_navbar.quickfilter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/blocks/model_form.before_fieldsets.wizard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/blocks/model_form.submit_line.wizard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/blocks/model_list.nav_form.search_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/blocks/model_list.nav_menu.bookmarks.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/blocks/model_list.nav_menu.filters.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/blocks/model_list.results_bottom.actions.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/blocks/model_list.results_top.charts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/blocks/model_list.results_top.date_hierarchy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/blocks/model_list.top_toolbar.exports.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/blocks/model_list.top_toolbar.importexport.export.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/blocks/model_list.top_toolbar.importexport.import.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/blocks/model_list.top_toolbar.layouts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/blocks/model_list.top_toolbar.refresh.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/blocks/model_list.top_toolbar.saveorder.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/edit_inline/accordion.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/edit_inline/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/edit_inline/blank.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/edit_inline/one.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/edit_inline/stacked.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/edit_inline/tab.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/edit_inline/tabular.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/filters/char.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/filters/checklist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/filters/date.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/filters/fk_search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/filters/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/filters/number.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/filters/quickfilter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/filters/rel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/forms/transfer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/grids/thumbnails.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/import_export/export_action.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/import_export/import.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/includes/box.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/includes/pagination.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/includes/sitemenu_accordion.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/includes/sitemenu_default.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/includes/submit_line.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/includes/toggle_back.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/includes/toggle_menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/layout/field_value.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/layout/field_value_td.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/layout/fieldset.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/layout/input_group.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/layout/td-field.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/views/app_index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/views/batch_change_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/views/dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/views/form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/views/invalid_setup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/views/logged_out.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/views/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/views/model_dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/views/model_delete_confirm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/views/model_delete_selected_confirm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/views/model_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/views/model_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/views/model_history.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/views/model_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/views/quick_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/views/quick_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/views/recover_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/views/recover_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/views/revision_diff.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/views/revision_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/widgets/addform.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/widgets/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/widgets/chart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/widgets/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/widgets/qbutton.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/templatetags/xadmin_tags.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/vendors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/views/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/views/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/views/dashboard.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/views/delete.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/views/detail.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/views/edit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/views/form.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/views/list.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/views/website.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/xadmin/widgets.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/MANIFEST.in" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/README.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/changelog.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/changelog.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/demo_app/app/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/demo_app/app/adminx.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/demo_app/app/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/demo_app/app/migrations/0002_idc_groups.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/demo_app/app/migrations/0003_host_administrator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/demo_app/app/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/demo_app/app/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/demo_app/app/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/demo_app/data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/demo_app/demo/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/demo_app/demo/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/demo_app/demo/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/demo_app/demo/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/demo_app/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/setup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/tests/runtests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/tests/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/tests/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/tests/xtests/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/tests/xtests/site/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/tests/xtests/site/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/tests/xtests/site/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/tests/xtests/site/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/tests/xtests/view_base/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/tests/xtests/view_base/adminx.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/tests/xtests/view_base/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/tests/xtests/view_base/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/tests/xtests/view_base/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/tests/xtests/view_base/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/.tx/config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/adminx.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/filters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/layout.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/de_DE/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/de_DE/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/de_DE/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/de_DE/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/en/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/en/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/en/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/en/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/es_MX/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/es_MX/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/es_MX/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/es_MX/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/eu/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/eu/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/eu/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/eu/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/id_ID/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/id_ID/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/id_ID/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/id_ID/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/ja/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/ja/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/ja/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/ja/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/lt/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/lt/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/lt/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/lt/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/nl_NL/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/nl_NL/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/nl_NL/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/nl_NL/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/pl/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/pl/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/pl/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/pl/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/pt_BR/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/pt_BR/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/pt_BR/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/pt_BR/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/ru_RU/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/ru_RU/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/ru_RU/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/ru_RU/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/zh_Hans/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/zh_Hans/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/zh_Hans/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/locale/zh_Hans/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/migrations/0002_log.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/migrations/0003_auto_20160715_0100.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/plugins/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/plugins/actions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/plugins/aggregation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/plugins/ajax.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/plugins/auth.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/plugins/batch.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/plugins/bookmark.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/plugins/chart.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/plugins/comments.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/plugins/details.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/plugins/editable.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/plugins/export.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/plugins/filters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/plugins/images.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/plugins/importexport.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/plugins/inline.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/plugins/language.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/plugins/layout.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/plugins/mobile.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/plugins/multiselect.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/plugins/passwords.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/plugins/portal.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/plugins/quickfilter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/plugins/quickform.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/plugins/refresh.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/plugins/relate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/plugins/relfield.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/plugins/sitemenu.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/plugins/sortablelist.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/plugins/themes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/plugins/topnav.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/plugins/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/plugins/wizard.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/plugins/xversion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/sites.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/component.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/css/themes/bootstrap-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/css/themes/bootstrap-theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/css/themes/bootstrap-xadmin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/css/xadmin.form.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/css/xadmin.main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/css/xadmin.mobile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/css/xadmin.page.dashboard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/css/xadmin.plugin.aggregation.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/css/xadmin.plugin.formset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/css/xadmin.plugin.importexport.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/css/xadmin.plugin.quickfilter.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/css/xadmin.plugins.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/css/xadmin.responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/css/xadmin.widget.editable.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/css/xadmin.widget.select-transfer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/js/xadmin.main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/js/xadmin.page.dashboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/js/xadmin.page.form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/js/xadmin.page.list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/js/xadmin.plugin.actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/js/xadmin.plugin.batch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/js/xadmin.plugin.bookmark.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/js/xadmin.plugin.charts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/js/xadmin.plugin.details.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/js/xadmin.plugin.editable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/js/xadmin.plugin.filters.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/js/xadmin.plugin.formset.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/js/xadmin.plugin.importexport.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/js/xadmin.plugin.portal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/js/xadmin.plugin.quick-form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/js/xadmin.plugin.quickfilter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/js/xadmin.plugin.refresh.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/js/xadmin.plugin.revision.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/js/xadmin.plugin.sortablelist.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/js/xadmin.plugin.themes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/js/xadmin.responsive.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/js/xadmin.widget.datetime.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/js/xadmin.widget.multiselect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/js/xadmin.widget.select-transfer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/js/xadmin.widget.select.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/autotype/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/css/datepicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.bg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.cs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.da.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.el.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.es.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.fi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.he.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.hr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.hu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.id.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.is.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.it.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ja.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.kr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.lt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.lv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ms.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.nb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.pl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.pt-BR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.pt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.rs-latin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.rs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.sk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.sl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.sv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.sw.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.th.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.tr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.uk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.zh-CN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.zh-TW.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-image-gallery/css/bootstrap-image-gallery.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-image-gallery/css/bootstrap-image-gallery.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-image-gallery/img/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-image-gallery/js/bootstrap-image-gallery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-image-gallery/js/bootstrap-image-gallery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-modal/css/bootstrap-modal.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-modal/img/ajax-loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-modal/js/bootstrap-modal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-modal/js/bootstrap-modalmanager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-multiselect/css/bootstrap-multiselect.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-multiselect/js/bootstrap-multiselect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-timepicker/css/bootstrap-timepicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-timepicker/css/bootstrap-timepicker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-timepicker/js/bootstrap-timepicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap-timepicker/js/bootstrap-timepicker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/flot/excanvas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/flot/excanvas.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/flot/jquery.colorhelpers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/flot/jquery.flot.aggregate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/flot/jquery.flot.canvas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/flot/jquery.flot.categories.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/flot/jquery.flot.crosshair.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/flot/jquery.flot.errorbars.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/flot/jquery.flot.fillbetween.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/flot/jquery.flot.image.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/flot/jquery.flot.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/flot/jquery.flot.navigate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/flot/jquery.flot.pie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/flot/jquery.flot.resize.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/flot/jquery.flot.selection.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/flot/jquery.flot.stack.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/flot/jquery.flot.symbol.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/flot/jquery.flot.threshold.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/flot/jquery.flot.time.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/font-awesome/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/font-awesome/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/font-awesome/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.core.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.core.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.effect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.effect.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.mouse.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.mouse.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.sortable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.sortable.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.widget.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.widget.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/jquery/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/jquery/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/load-image/load-image.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/load-image/load-image.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/select2/select2-spinner.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/select2/select2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/select2/select2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/select2/select2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/select2/select2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/select2/select2_locale_de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/select2/select2_locale_en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/select2/select2_locale_es.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/select2/select2_locale_eu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/select2/select2_locale_fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/select2/select2_locale_hr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/select2/select2_locale_hu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/select2/select2_locale_it.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/select2/select2_locale_nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/select2/select2_locale_pt-BR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/select2/select2_locale_pt-PT.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/select2/select2_locale_ro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/select2/select2_locale_ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/select2/select2_locale_sk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/select2/select2_locale_sv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/select2/select2_locale_tr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/select2/select2_locale_ua.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/select2/select2_locale_zh-CN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/select2/select2_locale_zh-hans.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/select2/select2x2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/selectize/selectize.bootstrap2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/selectize/selectize.bootstrap3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/selectize/selectize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/selectize/selectize.default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/selectize/selectize.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/selectize/selectize.legacy.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/selectize/selectize.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/snapjs/snap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/snapjs/snap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/static/xadmin/vendor/snapjs/snap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/500.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/auth/password_reset/complete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/auth/password_reset/confirm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/auth/password_reset/done.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/auth/password_reset/email.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/auth/password_reset/form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/auth/user/add_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/auth/user/change_password.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/base_site.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/blocks/comm.top.setlang.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/blocks/comm.top.theme.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/blocks/comm.top.topnav.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/blocks/modal_list.left_navbar.quickfilter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/blocks/model_form.before_fieldsets.wizard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/blocks/model_form.submit_line.wizard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/blocks/model_list.nav_form.search_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/blocks/model_list.nav_menu.bookmarks.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/blocks/model_list.nav_menu.filters.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/blocks/model_list.results_bottom.actions.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/blocks/model_list.results_top.charts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/blocks/model_list.results_top.date_hierarchy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/blocks/model_list.top_toolbar.exports.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/blocks/model_list.top_toolbar.importexport.export.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/blocks/model_list.top_toolbar.importexport.import.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/blocks/model_list.top_toolbar.layouts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/blocks/model_list.top_toolbar.refresh.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/blocks/model_list.top_toolbar.saveorder.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/edit_inline/accordion.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/edit_inline/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/edit_inline/blank.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/edit_inline/one.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/edit_inline/stacked.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/edit_inline/tab.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/edit_inline/tabular.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/filters/char.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/filters/checklist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/filters/date.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/filters/fk_search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/filters/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/filters/number.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/filters/quickfilter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/filters/rel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/forms/transfer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/grids/thumbnails.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/import_export/export_action.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/import_export/import.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/includes/box.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/includes/pagination.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/includes/sitemenu_accordion.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/includes/sitemenu_default.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/includes/submit_line.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/includes/toggle_back.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/includes/toggle_menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/layout/field_value.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/layout/field_value_td.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/layout/fieldset.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/layout/input_group.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/layout/td-field.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/views/app_index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/views/batch_change_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/views/dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/views/form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/views/invalid_setup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/views/logged_out.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/views/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/views/model_dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/views/model_delete_confirm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/views/model_delete_selected_confirm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/views/model_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/views/model_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/views/model_history.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/views/model_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/views/quick_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/views/quick_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/views/recover_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/views/recover_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/views/revision_diff.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/views/revision_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/widgets/addform.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/widgets/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/widgets/chart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/widgets/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templates/xadmin/widgets/qbutton.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/templatetags/xadmin_tags.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/vendors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/views/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/views/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/views/dashboard.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/views/delete.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/views/detail.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/views/edit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/views/form.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/views/list.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/views/website.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/xadmin-django2/xadmin/widgets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/django_blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/django_blog.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/Article/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/Article/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/Article/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/Article/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/Article/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/Article/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/aboutme/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aboutme/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_blog/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_blog/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/article_list.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/article_list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/article_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/article_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +809,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/django_blog$main.coverage" NAME="main Coverage Results" MODIFIED="1547030151152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/django_blog$main.coverage" NAME="main Coverage Results" MODIFIED="1547114595101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -47,7 +835,8 @@
           <entry key="project.closed" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -58,6 +847,7 @@
           <entry key="html" value="22" />
           <entry key="js" value="6" />
           <entry key="py" value="41" />
+          <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -66,6 +856,7 @@
           <entry key="Database Element" value="5" />
           <entry key="HTML" value="22" />
           <entry key="JavaScript" value="6" />
+          <entry key="PLAIN_TEXT" value="1" />
           <entry key="Python" value="41" />
         </counts>
       </usages-collector>
@@ -92,25 +883,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/Article/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-25">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-                <element signature="e#5761#5858#0" />
-                <marker date="1547030450705" expanded="true" signature="1953:3162" ph="..." />
-                <marker date="1547030450705" expanded="true" signature="4806:8629" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-775">
-              <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+            <state relative-caret-position="200">
+              <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
               <folding>
                 <element signature="e#2555#2561#0#HTML" expanded="true" />
                 <element signature="e#2561#2567#0#HTML" expanded="true" />
@@ -129,7 +905,7 @@
         <entry file="file://$PROJECT_DIR$/static/js/base.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -137,7 +913,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/Article/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
+            <state relative-caret-position="225">
               <caret line="13" column="64" selection-start-line="13" selection-start-column="64" selection-end-line="13" selection-end-column="64" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
@@ -149,8 +925,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/aboutme/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="350">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -158,16 +934,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/article_list.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="450">
+              <caret line="18" column="58" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
               <folding>
-                <element signature="e#209#215#0" expanded="true" />
-                <element signature="e#215#221#0" expanded="true" />
-                <element signature="e#271#279#0" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -175,8 +958,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/django_blog/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="125" column="91" lean-forward="true" selection-start-line="125" selection-start-column="91" selection-end-line="125" selection-end-column="91" />
+            <state relative-caret-position="3100">
+              <caret line="125" column="91" selection-start-line="125" selection-start-column="91" selection-end-line="125" selection-end-column="91" />
             </state>
           </provider>
         </entry>
@@ -184,7 +967,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/Article/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
+            <state relative-caret-position="1000">
               <caret line="45" column="12" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="12" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
@@ -196,7 +979,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/Article/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
+            <state relative-caret-position="375">
               <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
               <folding>
                 <element signature="e#61#74#0" expanded="true" />
@@ -208,7 +991,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/article_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
+            <state relative-caret-position="1550">
               <caret line="62" column="102" selection-start-line="62" selection-start-column="102" selection-end-line="62" selection-end-column="102" />
               <folding>
                 <element signature="e#869#875#1#HTML" expanded="true" />
@@ -534,12 +1317,12 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20469083" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20682302" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.35117057" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35117057" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39910814" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -592,9 +1375,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -661,7 +1441,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://c11fe364-28fa-4e3f-8318-c9425a494314/schema/main/table/article_article" />
     <entry file="das://c11fe364-28fa-4e3f-8318-c9425a494314/schema/main/table/article_article_tags" />
     <entry file="file://$PROJECT_DIR$/static/bootstrap/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -691,66 +1470,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/1.html" />
     <entry file="file://$PROJECT_DIR$/templates/about.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="19" column="29" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://c11fe364-28fa-4e3f-8318-c9425a494314/schema/main/table/article_article">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://c11fe364-28fa-4e3f-8318-c9425a494314/schema/main/table/article_article">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://c11fe364-28fa-4e3f-8318-c9425a494314/schema/main/table/article_article">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://c11fe364-28fa-4e3f-8318-c9425a494314/schema/main/table/article_article">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://c11fe364-28fa-4e3f-8318-c9425a494314/schema/main/table/article_article">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://c11fe364-28fa-4e3f-8318-c9425a494314/schema/main/table/article_article">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://c11fe364-28fa-4e3f-8318-c9425a494314/schema/main/table/article_article">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -786,9 +1510,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="382">
           <caret line="24" column="55" lean-forward="true" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
-          <folding>
-            <element signature="e#102#131#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -809,81 +1530,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/aboutme/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django_blog/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="125" column="91" lean-forward="true" selection-start-line="125" selection-start-column="91" selection-end-line="125" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/Article/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
-          <folding>
-            <element signature="e#61#74#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/article_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="62" column="102" selection-start-line="62" selection-start-column="102" selection-end-line="62" selection-end-column="102" />
-          <folding>
-            <element signature="e#869#875#1#HTML" expanded="true" />
-            <element signature="e#1100#1106#1#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/Article/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="45" column="12" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/Article/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="13" column="64" selection-start-line="13" selection-start-column="64" selection-end-line="13" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/Article/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-25">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="650">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
-            <element signature="e#5761#5858#0" />
-            <marker date="1547030450705" expanded="true" signature="1953:3162" ph="..." />
-            <marker date="1547030450705" expanded="true" signature="4806:8629" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-775">
-          <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        <state relative-caret-position="200">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
           <folding>
             <element signature="e#2555#2561#0#HTML" expanded="true" />
             <element signature="e#2561#2567#0#HTML" expanded="true" />
@@ -900,19 +1560,82 @@
     <entry file="file://$PROJECT_DIR$/static/js/base.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/Article/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="13" column="64" selection-start-line="13" selection-start-column="64" selection-end-line="13" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/aboutme/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_blog/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3100">
+          <caret line="125" column="91" selection-start-line="125" selection-start-column="91" selection-end-line="125" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/Article/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1000">
+          <caret line="45" column="12" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/Article/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
+          <folding>
+            <element signature="e#61#74#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/article_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1550">
+          <caret line="62" column="102" selection-start-line="62" selection-start-column="102" selection-end-line="62" selection-end-column="102" />
+          <folding>
+            <element signature="e#869#875#1#HTML" expanded="true" />
+            <element signature="e#1100#1106#1#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/article_list.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="450">
+          <caret line="18" column="58" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
           <folding>
-            <element signature="e#209#215#0" expanded="true" />
-            <element signature="e#215#221#0" expanded="true" />
-            <element signature="e#271#279#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
         </state>
       </provider>
     </entry>
