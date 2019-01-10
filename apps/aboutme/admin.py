@@ -6,6 +6,7 @@ from .models import *
 
 class MyInfoAdmin(object):
     list_display = ['zh_name','net_name','en_name','head_img','age','sex','phone','email','addr','wechat','resume','skills',]
+    style_fields = {"describe": "ueditor"}
 
 class SkillAdmin(object):
     list_display = ["name",]

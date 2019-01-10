@@ -12,6 +12,7 @@ class CategoryAdmin(object):
 
 class ArticleAdmin(object):
     list_display = ["title","author","category","tags","read_num","create_time","update_time"]
+    # style_fields = {"content": "ueditor"}
 
 
 class CommentAdmin(object):

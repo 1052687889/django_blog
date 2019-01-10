@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 from django.db import models
+from DjangoUeditor.models import UEditorField
 
 class Skill(models.Model):
     name = models.CharField('名称',max_length=20,null=True,default='')
@@ -26,7 +27,15 @@ class MyInfo(models.Model):
     email = models.EmailField('邮箱',null=True)
     addr = models.CharField('地址',max_length=300,null=True)
     wechat = models.ImageField('微信',upload_to='img/%Y/%m/%d', null=False, default='',blank=True)
-    describe = models.TextField('自我描述',null=True)
+    # describe = models.TextField('自我描述',null=True)
+    describe = UEditorField(verbose_name='自我描述',
+                            width=700,
+                            height=400,
+                            toolbars='full',
+                            imagePath='ueditor/images/',
+                            filePath='ueditor/files/',
+                            upload_settings={'imageMaxSizing':1024000},
+                            default='')
     resume = models.URLField('简历',max_length=200,null=True)
 
     skills = models.ManyToManyField(Skill,verbose_name='技能',through='Level')
