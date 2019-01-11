@@ -5,7 +5,7 @@ from datetime import datetime
 
 from django.db import models
 from ckeditor.fields import RichTextField
-
+from ckeditor_uploader.fields import RichTextUploadingField
 class Tag(models.Model):
     '''
     博客标签
@@ -38,7 +38,8 @@ class Article(models.Model):
     '''
     title = models.CharField('博客标题',max_length=100)
     # content = models.TextField('博客内容')
-    content = RichTextField(verbose_name='博客内容')
+    content = RichTextUploadingField(verbose_name='博客内容')
+    image = models.ImageField('文章图片', upload_to='img/%Y/%m/%d', null=False, default='/default/head.jpg')
     author = models.CharField('作者',max_length=30)
     # create_time = models.DateTimeField('创建时间',auto_now_add=True)
     create_time = models.DateTimeField('创建时间')

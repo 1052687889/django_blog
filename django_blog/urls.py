@@ -19,8 +19,12 @@ from django.urls import path,re_path,include
 from .views import Home,page_not_found
 from django.views.static import serve
 from .settings import MEDIA_ROOT
+from django.conf.urls.static import static
+from django.conf import settings
 urlpatterns = [
     path('xadmin/', xadmin.site.urls),
+    path('ueditor/',include('DjangoUeditor.urls' )),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
     re_path(r'media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
 
     path('',Home.as_view(),name='home'),
@@ -28,4 +32,5 @@ urlpatterns = [
     path('about/',include('aboutme.urls')),
 
 ]
+# urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 handler404 = 'page_not_found'

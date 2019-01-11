@@ -1,5 +1,125 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block title %}
-    {{ title }}
+    文章-{{ title }}
+{% endblock %}
+{% block other %}
+<script src="{% static 'ckeditor/ckeditor/plugins/prism/lib/prism/prism_patched.min.js' %}"></script>
+<link rel="stylesheet" href="{% static 'css/prism.css' %}">
+{% endblock %}
+{% block content %}
+    <br>
+<div class="row">
+    <div class="col-xl-1"></div>
+
+    <div class="col-xl-8" id="article_list">
+        <div class="card shadow-lg">
+          <div class="card-body" id="article_body">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    <h3 align="center">{{ title }}</h3>
+              <br>
+                 <h5>
+                   <div class="row">
+                   <div class="col-3">作者:&nbsp;{{ author }}</div>
+                   <div class="col-5">时间:&nbsp;{{ create_time }}</div>
+                   <div class="col-4">阅读数:&nbsp;{{ article_read_num }}</div>
+                   </div>
+                </h5>
+                <h5>
+                   <div class="row">
+                        <div class="col-3">类型:&nbsp;{{ type }}</div>
+                        <div class="col-9">标签:&nbsp;{% for t in tag %}
+                        {{ t }}
+                        {% endfor %}</div>
+                   </div>
+                </h5>
+              <hr>
+                {% autoescape off %}
+                {{ content }}
+                {% endautoescape %}
+                </div>
+                <div class="col-1"></div>
+            </div>
+
+              <br>
+              <br>
+          </div>
+
+        </div>
+    <br>
+    </div>
+
+    <div class="col-xl-2" id="article_right">
+        <div class="card shadow-lg">
+          <h5 class="card-header">最新文章</h5>
+          <div class="card-body">
+                {% for id,title in  new_article_list.items %}
+                        <h5>&nbsp;<a href="{% url 'blog' %}article/{{ id }}"  class="badge">{{ title|truncatechars:15 }}</a></h5>
+                {% endfor %}
+          </div>
+        </div>
+        <br>
+        <div class="card shadow-lg">
+          <h5 class="card-header">分类</h5>
+          <div class="card-body">
+              {% for id,name,total in  group %}
+                        <h5>&nbsp;<a href="{% url 'blog' %}category/{{ id }}"  class="badge">{{ name|truncatechars:15 }}({{ total }})</a></h5>
+                {% endfor %}
+          </div>
+        </div>
+        <br>
+        <div class="card shadow-lg">
+          <h5 class="card-header">标签</h5>
+          <div class="card-body">
+              {% for id,title_info in  tags.items %}
+                   <a href="{% url 'blog' %}tag/{{ id }}/" class="badge badge-{{ title_info.1 }}">{{ title_info.0 }}</a>&nbsp;&nbsp;
+              {% endfor %}
+          </div>
+        </div>
+    <br>
+    <div class="card shadow-lg">
+          <h5 class="card-header">归档</h5>
+          <div class="card-body">
+              {% for year,month,num in  date %}
+                  <h5><a href="{% url 'blog' %}date/{{ year }}/{{ month }}/" class="badge">{{ year }}-{{ month }}({{ num }})</a></h5>
+              {% endfor %}
+          </div>
+        </div>
+        <br>
+        <div class="card shadow-lg">
+          <h5 class="card-header">阅读排行榜</h5>
+          <div class="card-body">
+              {% for id,title,read_num in  read_num %}
+                  <h5><a href="{% url 'blog' %}article/{{ id }}" class="badge">{{ title|truncatechars:15 }}({{ read_num }})</a></h5>
+              {% endfor %}
+          </div>
+        </div>
+        <br>
+            <div class="card shadow-lg">
+          <h5 class="card-header">最新评论</h5>
+          <div class="card-body">
+          </div>
+        </div>
+    <br>
+    </div>
+    <div class="col-1"></div>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+
+
+
+
+
+
+
+
+
+
+
 {% endblock %}

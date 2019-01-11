@@ -38,7 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'xadmin',
+    'DjangoUeditor',
     'crispy_forms',
+    'ckeditor',
+    'ckeditor_uploader',
     'apps.Article',
     'apps.aboutme',
 ]
@@ -122,6 +125,53 @@ STATICFILES_DIRS = [
 # 指定上传媒体文件的位置
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+CKEDITOR_UPLOAD_PATH = 'upload/'
+# CKEDITOR_JQUERY_URL = 'js/jquery.min.js'
+# CKEDITOR_IMAGE_BACKEND = 'pillow'  # 图像库支持需要安装 PIL
+
+# CKEDITOR_CONFIGS = {
+#     'default': {
+#         'toolbar': (['div', 'Source', '-', 'Save', 'NewPage', 'Preview', '-', 'Templates'],
+#                     ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Print', 'SpellChecker', 'Scayt'],
+#                     ['Undo', 'Redo', '-', 'Find', 'Replace', '-', 'SelectAll', 'RemoveFormat', '-', 'Maximize',
+#                      'ShowBlocks', '-', "CodeSnippet", 'Subscript', 'Superscript'],
+#                     ['Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton',
+#                      'HiddenField'],
+#                     ['Bold', 'Italic', 'Underline', 'Strike', '-'],
+#                     ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', 'Blockquote'],
+#                     ['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+#                     ['Link', 'Unlink', 'Anchor'],
+#                     ['Image', 'Flash', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak'],
+#                     ['Styles', 'Format', 'Font', 'FontSize'],
+#                     ['TextColor', 'BGColor'],
+#
+#                     ),
+#         'extraPlugins': 'codesnippet',
+#     }
+# }
+CKEDITOR_CONFIGS = {
+    # 配置名是default时，django-ckeditor默认使用这个配置
+    'default': {
+        # 使用简体中文
+        'language':'zh-cn',
+        # 编辑器的宽高请根据你的页面自行设置
+        'width':'730px',
+        'height':'150px',
+        'image_previewText':' ',
+        'tabSpaces': 4,
+        'toolbar': 'Custom',
+        # 添加按钮在这里
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline', 'Format', 'RemoveFormat'],
+            ['NumberedList', 'BulletedList'],
+            ['Blockquote', 'CodeSnippet'],
+            ['Image', 'Link', 'Unlink'],
+            ['Maximize']
+        ],
+        # 插件
+        'extraPlugins': ','.join(['codesnippet','uploadimage','prism','widget','lineutils',]),
+    }
+}
 
 TAG_COLOR_LIST = ['primary','secondary','success','danger','warning','info','light','dark']
 TYPE='type'

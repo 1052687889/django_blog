@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block title %}
-    首页
+    博客列表
 {% endblock %}
 {% block other %}
     <script src="{% static 'js/article_list.js' %}"></script>
@@ -9,9 +9,9 @@
 {% block content %}
     <br>
 <div class="row">
-    <div class="col-1"></div>
+    <div class="col-xl-1"></div>
 
-    <div class="col-8" id="article_list">
+    <div class="col-xl-8" id="article_list">
         <div class="card shadow-lg">
           <h5 class="card-header">{{ type }}</h5>
           <div class="card-body" id="article_list_body">
@@ -19,12 +19,12 @@
         </div>
     </div>
 
-    <div class="col-2" id="article_right">
+    <div class="col-xl-2" id="article_right">
         <div class="card shadow-lg">
           <h5 class="card-header">最新文章</h5>
           <div class="card-body">
                 {% for id,title in  new_article_list.items %}
-                        <h5>&nbsp;<a href="{% url 'blog' %}article/{{ id }}"  class="badge">{{ title }}</a></h5>
+                        <h5>&nbsp;<a href="{% url 'blog' %}article/{{ id }}"  class="badge">{{ title|truncatechars:15 }}</a></h5>
                 {% endfor %}
           </div>
         </div>
@@ -33,7 +33,7 @@
           <h5 class="card-header">分类</h5>
           <div class="card-body">
               {% for id,name,total in  group %}
-                        <h5>&nbsp;<a href="{% url 'blog' %}category/{{ id }}"  class="badge">{{ name }}({{ total }})</a></h5>
+                        <h5>&nbsp;<a href="{% url 'blog' %}category/{{ id }}"  class="badge">{{ name|truncatechars:15 }}({{ total }})</a></h5>
                 {% endfor %}
           </div>
         </div>
@@ -60,7 +60,7 @@
           <h5 class="card-header">阅读排行榜</h5>
           <div class="card-body">
               {% for id,title,read_num in  read_num %}
-                  <h5><a href="{% url 'blog' %}article/{{ id }}" class="badge">{{ title }}({{ read_num }})</a></h5>
+                  <h5><a href="{% url 'blog' %}article/{{ id }}" class="badge">{{ title|truncatechars:15 }}({{ read_num }})</a></h5>
               {% endfor %}
           </div>
         </div>

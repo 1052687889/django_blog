@@ -162,13 +162,35 @@ function addArticleList(response) {
     }
     if(article_list.length){
         LOAD_INDEX+=article_list.length;
-        html='<div class="card" style="width: auto;">\
+        html='<div class="card shadow-lg" style="width: auto;hight:100;">\
           <ul class="list-group list-group-flush">\
-          <li class="list-group-item"><h4><a href="/blog/article/{id}">{title}</a></h4>\
-            author:{author}&nbsp;&nbsp;创建时间:{create_time}type:{type} tag:{tag}<br>postCon:{postCon}&hellip;</li>\
-          </ul>\
-        </div>\
-        <br>';
+          <li class="list-group-item">\
+          <div class="row">\
+                <div class="col-2">\
+                <a href="/blog/article/{id}" class="badge"><img src="{image}" alt="" style="width: 100%;height: auto;"></a>\
+                </div>\
+                <div class="col-10">\
+                <h4><a href="/blog/article/{id}" class="badge">{title}</a></h4>                     \
+                   <h5>\
+                   <div class="row">\
+                   <div class="col-3">作者:&nbsp;{author}</div>\
+                   <div class="col-5">时间:&nbsp;{create_time}</div>\
+                   <div class="col-4">阅读数:&nbsp;{read_num}</div>\
+                   </div>\
+                   </h5>\
+                    <h5>\
+                   <div class="row">\
+                        <div class="col-3">类型:&nbsp;{type}</div>\
+                        <div class="col-9">标签:&nbsp;{tag}</div>\
+                   </div>\
+                    </h5>\
+                    <div style="width: 100%;height: auto;" >摘要:&nbsp;&nbsp;&nbsp;{postCon}&hellip;</div>\
+                    </div>\
+            </div>\
+                      </li>\
+                      </ul>\
+                    </div>\
+                    <br>';
     insertToArticleList(article_list,html);
     $("div#article_list").append("<br>");
     }
