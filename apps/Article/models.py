@@ -4,7 +4,7 @@ from django.db import models
 from datetime import datetime
 
 from django.db import models
-from DjangoUeditor.models import UEditorField
+from ckeditor.fields import RichTextField
 
 class Tag(models.Model):
     '''
@@ -38,14 +38,7 @@ class Article(models.Model):
     '''
     title = models.CharField('博客标题',max_length=100)
     # content = models.TextField('博客内容')
-    content = UEditorField(verbose_name='博客内容',
-                            width=700,
-                            height=400,
-                            toolbars='full',
-                            imagePath='ueditor/images/',
-                            filePath='ueditor/files/',
-                            upload_settings={'imageMaxSizing':1024000},
-                            default='')
+    content = RichTextField(verbose_name='博客内容')
     author = models.CharField('作者',max_length=30)
     # create_time = models.DateTimeField('创建时间',auto_now_add=True)
     create_time = models.DateTimeField('创建时间')
