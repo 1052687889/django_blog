@@ -14,9 +14,7 @@ class Skill(models.Model):
     def __str__(self):
         return self.name
 
-
 class MyInfo(models.Model):
-
     zh_name = models.CharField('中文名',max_length=10,null=False,default='黄晔')
     net_name = models.CharField('网名',max_length=10,null=True,default='饕客')
     en_name = models.CharField('英文名',max_length=30,null=True,default='Tate')
@@ -27,7 +25,6 @@ class MyInfo(models.Model):
     email = models.EmailField('邮箱',null=True)
     addr = models.CharField('地址',max_length=300,null=True)
     wechat = models.ImageField('微信',upload_to='img/%Y/%m/%d', null=False, default='',blank=True)
-    # describe = models.TextField('自我描述',null=True)
     describe = UEditorField(verbose_name='自我描述',
                             width=700,
                             height=400,
@@ -37,21 +34,8 @@ class MyInfo(models.Model):
                             upload_settings={'imageMaxSizing':1024000},
                             default='')
     resume = models.URLField('简历',max_length=200,null=True)
-
     skills = models.ManyToManyField(Skill,verbose_name='技能',through='Level')
-
-    zh_name_useful = models.BooleanField('中文名字是否有效',default=True)
-    net_name_useful = models.BooleanField('网名是否有效',default=True)
-    en_name_useful = models.BooleanField('英文名字是否有效',default=True)
-    head_img_useful = models.BooleanField('头像是否有效', default=True)
-    age_useful = models.BooleanField('年龄是否有效',default=True)
-    sex_useful = models.BooleanField('性别是否有效',default=True)
-    phone_useful = models.BooleanField('电话号码是否有效',default=True)
-    email_useful = models.BooleanField('邮箱是否有效',default=True)
-    addr_useful = models.BooleanField('地址是否有效',default=True)
-    wechat_useful = models.BooleanField('微信是否有效',default=True)
-    describe_useful = models.BooleanField('自我描述是否有效',default=True)
-    resume_useful = models.BooleanField('简历是否有效',default=True)
+    num = models.IntegerField('点赞数', default=0)
 
     class Meta:
         verbose_name="关于我"
@@ -62,10 +46,10 @@ class MyInfo(models.Model):
 
 
 class Level(models.Model):
-
     myinfo = models.ForeignKey(MyInfo,on_delete=models.CASCADE)
     skill = models.ForeignKey(Skill, on_delete=models.CASCADE)
     score = models.IntegerField('分数',default=0)
+
     class Meta:
         verbose_name="技能水平"
         verbose_name_plural=verbose_name

@@ -167,23 +167,27 @@ function addArticleList(response) {
           <li class="list-group-item">\
           <div class="row">\
                 <div class="col-2">\
-                <a href="/blog/article/{id}" class="badge"><img src="{image}" alt="" style="width: 100%;height: auto;"></a>\
+                    <div class="article_img">\
+                        <a href="/blog/article/{id}" class="badge">\
+                            <img src="{image}" style="width: 100%;height: auto;" alt="">\
+                        </a>\
+                    </div>\
                 </div>\
                 <div class="col-10">\
-                <h4><a href="/blog/article/{id}" class="badge">{title}</a></h4>                     \
-                   <h5>\
-                   <div class="row">\
-                   <div class="col-3">作者:&nbsp;{author}</div>\
-                   <div class="col-5">时间:&nbsp;{create_time}</div>\
-                   <div class="col-4">阅读数:&nbsp;{read_num}</div>\
-                   </div>\
-                   </h5>\
-                    <h5>\
+                <a href="/blog/article/{id}" class="badge"><h4>{title}</h4> </a>                    \
+                   <h6>\
+                       <div class="row">\
+                           <div class="col-3">作者:&nbsp;{author}</div>\
+                           <div class="col-5">时间:&nbsp;{create_time}</div>\
+                           <div class="col-4">阅读数:&nbsp;{read_num}</div>\
+                       </div>\
+                   </h6>\
+                   <h6>\
                    <div class="row">\
                         <div class="col-3">类型:&nbsp;{type}</div>\
                         <div class="col-9">标签:&nbsp;{tag}</div>\
                    </div>\
-                    </h5>\
+                    </h6>\
                     <div style="width: 100%;height: auto;" >摘要:&nbsp;&nbsp;&nbsp;{postCon}&hellip;</div>\
                     </div>\
             </div>\

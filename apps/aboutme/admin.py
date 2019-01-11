@@ -14,6 +14,9 @@ class SkillAdmin(object):
 class LevelAdmin(object):
     list_display = ['myinfo','skill','score']
 
+
+
 xadmin.site.register(MyInfo, MyInfoAdmin)
 xadmin.site.register(Skill, SkillAdmin)
 xadmin.site.register(Level, LevelAdmin)
+

@@ -9,6 +9,7 @@
 {% block other %}
     <link rel="stylesheet" href="{% static 'css/about.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/article_list.css' %}">
     <script src="{% static 'js/about.js' %}"></script>
 {% endblock %}
 
@@ -71,10 +72,11 @@
             </div>
             <hr>
             <br>
-                <img id="zan_img" src="{% static 'image/zan.jpg' %}" onclick="zan_onclick()">
-
-            <p align="center">点个赞呗</p>
-
+            <div align="center">
+                <h1><text id="zan_num">{{ myinfo.num }}</text>&nbsp;次</h1>
+                <img class="zan_img" style="cursor:pointer"  onclick="zan_onclick()" src="{% static 'image/zan.jpg' %}">
+                <p align="center" >点个赞呗</p>
+            </div>
             <br>
         </div>
     </div>

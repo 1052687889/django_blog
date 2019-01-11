@@ -193,6 +193,6 @@ class article(View):
         except Exception as e:
             print(e)
             return render(request, '404.html', context=context)
-        print(context)
+        # print(context)
         return render(request, 'article_detail.html',context=context)
 

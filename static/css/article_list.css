@@ -1,0 +1,10 @@
+.article_img{
+  overflow: hidden;
+}
+.article_img img{
+  cursor: pointer;
+  transition: all 0.6s;
+}
+.article_img img:hover{
+  transform: scale(1.4);
+}

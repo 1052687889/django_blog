@@ -4,10 +4,11 @@ from django.shortcuts import render
 from django.views import View
 from apps.aboutme.models import Skill,MyInfo,Level
 from django.shortcuts import render_to_response
+from django.http.response import JsonResponse
 from django_blog.settings import MEDIA_URL
 from apps.Article.models import Category,Article
 from django.db.models import Count
-
+from datetime import datetime
 class About(View):
     def get(self, request):
         myinfo = MyInfo.objects.first()
@@ -18,5 +19,12 @@ class About(View):
         return render_to_response('about.html',{'media':MEDIA_URL,
                                                 'myinfo':myinfo,
                                                 'skills':skills,
-                                                'group': group
+                                                'group': group,
                                                 })
+
+class Zan(View):
+    def get(self,request):
+        myinfo = MyInfo.objects.first()
+        myinfo.num += 1
+        myinfo.save()
+        return JsonResponse({'zan_num':myinfo.num,'time':datetime.now()})
