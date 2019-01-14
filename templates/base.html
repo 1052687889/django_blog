@@ -42,10 +42,13 @@
                 <a class="nav-link" href="{% url 'about' %}">关于我<span class="sr-only">(current)</span></a>
             </li>
         </ul>
-      <form class="form-inline my-2 my-sm-0">
+    {% if request.user.is_authenticated %}
+        <h4>登录成功</h4>
+    {% else %}
           <a class="btn btn-sm btn-outline-success my-2 my-sm-0" href="{% url 'login' %}" role="button">登录</a>&nbsp;&nbsp;
           <a class="btn btn-sm btn-outline-success my-2 my-sm-0" href="{% url 'register' %}" role="button">注册</a>
-      </form>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    {% endif %}
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">查找</button>
