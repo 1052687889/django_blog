@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-
+AUTH_USER_MODEL = 'users.UserProfile'
 # Application definition
 
 INSTALLED_APPS = [
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'apps.Article',
     'apps.aboutme',
+    'apps.users',
 ]
 
 MIDDLEWARE = [

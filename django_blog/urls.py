@@ -30,6 +30,7 @@ urlpatterns = [
     path('',Home.as_view(),name='home'),
     path('blog/', include('Article.urls')),
     path('about/',include('aboutme.urls')),
+    path('users/',include('users.urls')),
 
 ]
 # urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
