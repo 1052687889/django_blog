@@ -23,3 +23,18 @@ def page_not_found(request):
         'total')
     context['group'] = [(category['category'], category['category__name'], category['total']) for category in group]
     return render(request, '404.html', context=context)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

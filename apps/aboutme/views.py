@@ -3,7 +3,6 @@ from django.shortcuts import render
 # Create your views here.
 from django.views import View
 from apps.aboutme.models import Skill,MyInfo,Level
-from django.shortcuts import render_to_response
 from django.http.response import JsonResponse
 from django_blog.settings import MEDIA_URL
 from apps.Article.models import Category,Article
@@ -16,7 +15,7 @@ class About(View):
         group = Article.objects.all().values('category', 'category__name').annotate(total=Count('category')).order_by(
             'total')
         group = [(category['category'], category['category__name'], category['total']) for category in group]
-        return render_to_response('about.html',{'media':MEDIA_URL,
+        return render(request,'about.html',    {'media':MEDIA_URL,
                                                 'myinfo':myinfo,
                                                 'skills':skills,
                                                 'group': group,

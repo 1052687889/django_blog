@@ -26,6 +26,7 @@ urlpatterns = [
     path('ueditor/',include('DjangoUeditor.urls' )),
     path('ckeditor/', include('ckeditor_uploader.urls')),
     re_path(r'media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
+    re_path(r'^captcha/', include('captcha.urls')),
 
     path('',Home.as_view(),name='home'),
     path('blog/', include('Article.urls')),

@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'apps.Article',
     'apps.aboutme',
     'apps.users',
+    'captcha',
 ]
 
 MIDDLEWARE = [
@@ -178,3 +179,24 @@ TAG_COLOR_LIST = ['primary','secondary','success','danger','warning','info','lig
 TYPE='type'
 TAG='tag'
 DATE='date'
+
+EMAIL_HOST = 'smtp.qq.com'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = "1052687889@qq.com"
+EMAIL_HOST_PASSWORD = "1994414110hy"
+EMAIL_USE_TLS = False
+EMAIL_FROM = EMAIL_HOST_USER
+
+
+
+
+
+
+
+
+
+
+
+
+
+

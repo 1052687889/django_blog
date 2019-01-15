@@ -175,7 +175,6 @@ class article(View):
             'total')
         read_num_article_list = Article.objects.all().order_by('-read_num')[0:5]
         try:
-            # context['type'] = "归档 - %s年%s月" % (year, month)
             context['tags'] = {tag.id: [tag.name, settings.TAG_COLOR_LIST[index % len(settings.TAG_COLOR_LIST)]] for
                                index, tag in enumerate(tags)}
             context['new_article_list'] = {article.id: article.title for article in new_article_list}
@@ -193,6 +192,5 @@ class article(View):
         except Exception as e:
             print(e)
             return render(request, '404.html', context=context)
-        # print(context)
         return render(request, 'article_detail.html',context=context)
 
