@@ -1,35 +1,23 @@
 from django.shortcuts import render
 from django.http.response import Http404,JsonResponse
-from django.db.models import Count
-from django.db.models.functions import ExtractYear,ExtractMonth
+
 # Create your views here.
 
 from django.views import View
 from django.conf import settings
 import datetime
-from apps.Article.models import Article,Category,Tag
+from apps.Article.models import Article,Category,Tag,QuertBaseData
 from lxml import etree
+
+
+
 class category(View):
     def get(self, request,_id):
         context = {}
         _type = Category.objects.filter(id=_id).first()
-        new_article_list = Article.objects.order_by('create_time')[0:5]
-        tags = Tag.objects.order_by('id').all()
-        _date = Article.objects\
-            .annotate(year=ExtractYear('create_time'),month=ExtractMonth('create_time'))\
-            .values('year','month')\
-            .annotate(nums=Count('create_time'))
-        group = Article.objects.all().values('category','category__name').annotate(total=Count('category')).order_by('total')
-        read_num_article_list = Article.objects.all().order_by('-read_num')[0:5]
         try:
             context['type'] = '分类 - '+_type.name
-            context['tags'] = {tag.id: [tag.name, settings.TAG_COLOR_LIST[index % len(settings.TAG_COLOR_LIST)]] for
-                               index, tag in enumerate(tags)}
-            context['new_article_list'] = {article.id: article.title for article in new_article_list}
-            context['article_types'] = {category['category']: category['category__name'] for category in group}
-            context['date'] = [(d['year'], d['month'], d['nums']) for d in _date]
-            context['group'] = [(category['category'], category['category__name'], category['total']) for category in group]
-            context['read_num'] = [(d.id, d.title, d.read_num) for d in read_num_article_list]
+            context.update(QuertBaseData(request))
         except Exception as e:
             return render(request, '404.html',context=context)
         return render(request, 'article_list.html',context=context)
@@ -37,20 +25,8 @@ class category(View):
 class blog(View):
     def get(self,request):
         context = {}
-        new_article_list = Article.objects.order_by('-create_time')[0:5]
-        tags = Tag.objects.order_by('id').all()
-        _date = Article.objects\
-            .annotate(year=ExtractYear('create_time'),month=ExtractMonth('create_time'))\
-            .values('year','month')\
-            .annotate(nums=Count('create_time'))
-        group = Article.objects.all().values('category','category__name').annotate(total=Count('category')).order_by('total')
-        read_num_article_list = Article.objects.all().order_by('-read_num')[0:5]
         context['type'] = '全部'
-        context['tags'] = {tag.id:[tag.name,settings.TAG_COLOR_LIST[index % len(settings.TAG_COLOR_LIST)]] for index,tag in enumerate(tags)}
-        context['new_article_list'] = {article.id:article.title for article in new_article_list}
-        context['date'] = [(d['year'],d['month'],d['nums']) for d in _date]
-        context['group'] = [(category['category'], category['category__name'],category['total']) for category in group]
-        context['read_num'] = [(d.id,d.title,d.read_num) for d in read_num_article_list]
+        context.update(QuertBaseData(request))
         return render(request, 'article_list.html',context=context)
 
 
@@ -58,25 +34,9 @@ class tag(View):
     def get(self,request,_id):
         context = {}
         tag = Tag.objects.filter(id=_id).first()
-        new_article_list = Article.objects.order_by('create_time')[0:5]
-        tags = Tag.objects.order_by('id').all()
-        _date = Article.objects \
-            .annotate(year=ExtractYear('create_time'), month=ExtractMonth('create_time')) \
-            .values('year', 'month') \
-            .annotate(nums=Count('create_time'))
-        group = Article.objects.all().values('category', 'category__name').annotate(total=Count('category')).order_by(
-            'total')
-        read_num_article_list = Article.objects.all().order_by('-read_num')[0:5]
         try:
             context['type'] = '标签 - '+tag.name
-            context['tags'] = {tag.id: [tag.name, settings.TAG_COLOR_LIST[index % len(settings.TAG_COLOR_LIST)]] for
-                               index, tag in enumerate(tags)}
-            context['new_article_list'] = {article.id: article.title for article in new_article_list}
-            context['article_types'] = {category['category']: category['category__name'] for category in group}
-            context['date'] = [(d['year'], d['month'], d['nums']) for d in _date]
-            context['group'] = [(category['category'], category['category__name'], category['total']) for category in
-                                group]
-            context['read_num'] = [(d.id, d.title, d.read_num) for d in read_num_article_list]
+            context.update(QuertBaseData(request))
         except Exception as e:
             return render(request, '404.html', context=context)
         return render(request, 'article_list.html', context=context)
@@ -84,25 +44,9 @@ class tag(View):
 class _date(View):
     def get(self,request,year,month):
         context = {}
-        new_article_list = Article.objects.order_by('create_time')[0:5]
-        tags = Tag.objects.order_by('id').all()
-        _date = Article.objects \
-            .annotate(year=ExtractYear('create_time'), month=ExtractMonth('create_time')) \
-            .values('year', 'month') \
-            .annotate(nums=Count('create_time'))
-        group = Article.objects.all().values('category', 'category__name').annotate(total=Count('category')).order_by(
-            'total')
-        read_num_article_list = Article.objects.all().order_by('-read_num')[0:5]
         try:
             context['type'] = "归档 - %s年%s月"%(year,month)
-            context['tags'] = {tag.id: [tag.name, settings.TAG_COLOR_LIST[index % len(settings.TAG_COLOR_LIST)]] for
-                               index, tag in enumerate(tags)}
-            context['new_article_list'] = {article.id: article.title for article in new_article_list}
-            context['article_types'] = {category['category']: category['category__name'] for category in group}
-            context['date'] = [(d['year'], d['month'], d['nums']) for d in _date]
-            context['group'] = [(category['category'], category['category__name'], category['total']) for category in
-                                group]
-            context['read_num'] = [(d.id, d.title, d.read_num) for d in read_num_article_list]
+            context.update(QuertBaseData(request))
         except Exception as e:
             return render(request, '404.html', context=context)
         return render(request, 'article_list.html', context=context)
@@ -165,30 +109,14 @@ class article(View):
         context = {}
         article = Article.objects.filter(id=_id).first()
         context['title'] = article.title
-        new_article_list = Article.objects.order_by('create_time')[0:5]
-        tags = Tag.objects.order_by('id').all()
-        _date = Article.objects \
-            .annotate(year=ExtractYear('create_time'), month=ExtractMonth('create_time')) \
-            .values('year', 'month') \
-            .annotate(nums=Count('create_time'))
-        group = Article.objects.all().values('category', 'category__name').annotate(total=Count('category')).order_by(
-            'total')
-        read_num_article_list = Article.objects.all().order_by('-read_num')[0:5]
         try:
-            context['tags'] = {tag.id: [tag.name, settings.TAG_COLOR_LIST[index % len(settings.TAG_COLOR_LIST)]] for
-                               index, tag in enumerate(tags)}
-            context['new_article_list'] = {article.id: article.title for article in new_article_list}
-            context['article_types'] = {category['category']: category['category__name'] for category in group}
-            context['date'] = [(d['year'], d['month'], d['nums']) for d in _date]
-            context['group'] = [(category['category'], category['category__name'], category['total']) for category in
-                                group]
-            context['read_num'] = [(d.id, d.title, d.read_num) for d in read_num_article_list]
             context['author'] = article.author
             context['article_read_num'] = article.read_num
             context['create_time'] = article.create_time
             context['type'] = article.category
             context['tag'] = [tag.name for tag in article.tags.all()]
             context['content'] = article.content
+            context.update(QuertBaseData(request))
         except Exception as e:
             print(e)
             return render(request, '404.html', context=context)

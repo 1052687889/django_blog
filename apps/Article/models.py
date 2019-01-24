@@ -2,10 +2,14 @@ from django.db import models
 
 # Create your models here.
 from datetime import datetime
-
+from django.db.models import Count
 from django.db import models
+from django.db.models import Count
+from django.db.models.functions import ExtractYear,ExtractMonth
+from django.conf import settings
 from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
+
 class Tag(models.Model):
     '''
     博客标签
@@ -52,6 +56,14 @@ class Article(models.Model):
         verbose_name="博客"
         verbose_name_plural=verbose_name
 
+    @staticmethod
+    def get_group():
+        context = {}
+        group = Article.objects.all().values('category', 'category__name').annotate(total=Count('category')).order_by(
+            'total')
+        context['group'] = [(category['category'], category['category__name'], category['total']) for category in group]
+        return context
+
     def __str__(self):
         return self.title
 
@@ -75,9 +87,26 @@ class Comment(models.Model):
 
 
 
+from django_blog.genfunc import get_top_data
 
-
-
+def QuertBaseData(request):
+    '''
+    查询博客基本信息
+    :return:
+    '''
+    context = get_top_data(request)
+    new_article_list = Article.objects.order_by('create_time')[0:5]
+    tags = Tag.objects.order_by('id').all()
+    _date = Article.objects.annotate(year=ExtractYear('create_time'), month=ExtractMonth('create_time')).values('year', 'month').annotate(nums=Count('create_time'))
+    group = Article.objects.all().values('category', 'category__name').annotate(total=Count('category')).order_by('total')
+    read_num_article_list = Article.objects.all().order_by('-read_num')[0:5]
+    context['tags'] = {tag.id: [tag.name, settings.TAG_COLOR_LIST[index % len(settings.TAG_COLOR_LIST)]] for index, tag in enumerate(tags)}
+    context['new_article_list'] = {article.id: article.title for article in new_article_list}
+    context['article_types'] = {category['category']: category['category__name'] for category in group}
+    context['date'] = [(d['year'], d['month'], d['nums']) for d in _date]
+    context['group'] = [(category['category'], category['category__name'], category['total']) for category in group]
+    context['read_num'] = [(d.id, d.title, d.read_num) for d in read_num_article_list]
+    return context
 
 
 
