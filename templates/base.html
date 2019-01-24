@@ -43,6 +43,7 @@
             </li>
         </ul>
     {% if request.user.is_authenticated %}
+        <img src="{% static "" %}/{{ image }}" alt="">
         <h4>登录成功</h4>
     {% else %}
           <a class="btn btn-sm btn-outline-success my-2 my-sm-0" href="{% url 'login' %}" role="button">登录</a>&nbsp;&nbsp;

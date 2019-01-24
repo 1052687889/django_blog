@@ -2,8 +2,8 @@ from django.db import models
 
 # Create your models here.
 from datetime import datetime
-from django.utils import timezone
-
+# from django.utils import timezone
+from datetime import datetime
 
 from django.db import models
 from django.contrib.auth.models import AbstractUser
@@ -37,8 +37,9 @@ class UserProfile(AbstractUser):
 class EmailVerifyRecord(models.Model):
     code = models.CharField(max_length=20, verbose_name=u"验证码")
     email = models.EmailField(max_length=50, verbose_name=u"邮箱")
+    username = models.CharField(max_length=20,verbose_name="用户名")
     send_type = models.CharField(verbose_name=u"验证码类型", choices=(("register",u"注册"),("forget",u"找回密码"), ("update_email",u"修改邮箱")), max_length=30)
-    send_time = models.DateTimeField(verbose_name=u"发送时间", default=timezone.now)
+    send_time = models.DateTimeField(verbose_name=u"发送时间", default=datetime.now)
 
     class Meta:
         verbose_name = u"邮箱验证码"

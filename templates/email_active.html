@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}
+    注册激活成功
+{% endblock %}
+{% block other %}
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="row">
+        <div class="col-xl-3"></div>
+        <div class="col-xl-6" style="height: 700px">
+            <br>
+                <div class="card shadow-lg">
+                    <h5 class="card-header">注册激活信息</h5>
+                    <br>
+                    <div class="row">
+                        <div class="col-2"></div>
+                         <div class="col-8">
+                             <br>
+                         <div class="row">
+                             <div class="col-3">
+                                 {% if email %}<h5>Email:</h5>{% endif %}
+                                 {% if username %}<h5>用户名:</h5>{% endif %}</div>
+                             <div class="col-9">
+                                 {% if email %}<h4>{{ email }}</h4>{% endif %}
+                                 {% if username %}<h4>{{ username }}</h4>{% endif %}</div>
+                         </div>
+
+                             <h5>{{ msg }}</h5>
+                         <div class="row">
+                             <div class="col-5"></div>
+
+                             <div class="col-2">
+                                 <a class="btn btn-primary" href="{% url 'login' %}" role="button">登录</a>
+                             </div>
+                             <div class="col-5"></div>
+                         </div>
+                         </div>
+                        <div class="col-2"></div>
+                    </div>
+                    <br>
+            </div>
+        </div>
+        <div class="col-xl-3"></div>
+    </div>
+{% endblock %}
