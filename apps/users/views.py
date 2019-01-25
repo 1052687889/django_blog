@@ -2,7 +2,7 @@ import urllib
 from django.views import View
 from django.shortcuts import render
 # Create your views here.
-from django.contrib.auth import authenticate,login
+from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.hashers import make_password
 from django.http import HttpResponseRedirect
 from django.urls import reverse
@@ -68,6 +68,12 @@ class LoginView(View):
         context.update({"login_form":login_form})
         return render(request, 'login.html',context=context)
 
+class LogoutView(View):
+    def get(self, request):
+        # django自带的logout
+        logout(request)
+        # 重定向到首页,
+        return HttpResponseRedirect(reverse("home"))
 
 class ActiveUserView(View):
     def get(self,request):

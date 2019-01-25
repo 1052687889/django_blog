@@ -37,3 +37,6 @@ class LoginForm(forms.Form):
 		'min_length': '密码的最小长度是6位',
 		'required': '密码不能为空'
 	})
+
+class CommentForm(forms.Form):
+	id = forms.IntegerField()

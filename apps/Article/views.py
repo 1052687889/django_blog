@@ -108,6 +108,7 @@ class article(View):
     def get(self,request,_id):
         context = {}
         article = Article.objects.filter(id=_id).first()
+        context['article_id'] = article.id
         context['title'] = article.title
         try:
             context['author'] = article.author
@@ -122,3 +123,13 @@ class article(View):
             return render(request, '404.html', context=context)
         return render(request, 'article_detail.html',context=context)
 
+
+class comment(View):
+    def post(self,request):
+        if request.POST:
+            s_ype = request.POST['id']
+            numb = request.POST['comment']
+            return render(request, '404.html', context={})
+        else:
+            return render(request, '404.html', context={})
+        pass

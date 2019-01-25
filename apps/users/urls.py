@@ -4,11 +4,12 @@ __author__ = "taoke"
 __datetime__ = "19-1-13 19:05:24"
 
 from django.urls import path
-from .views import LoginView,RegisterView,ActiveUserView
+from .views import LoginView,RegisterView,ActiveUserView,LogoutView
 
 urlpatterns = [
     path('register/',RegisterView.as_view(),name='register'),
     path('login/',LoginView.as_view(),name='login'),
+    path('logout/',LogoutView.as_view(),name='logout'),
     path('active/',ActiveUserView.as_view(),name='active'),
 ]
 

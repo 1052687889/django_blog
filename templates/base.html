@@ -43,12 +43,35 @@
             </li>
         </ul>
     {% if request.user.is_authenticated %}
-        <img src="{% static "" %}/{{ image }}" alt="">
-        <h4>登录成功</h4>
+        <div class="left">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                                <img class="img-circle user_head_img" src="{{ head_image }}">
+                            </a>
+                            <div class="dropdown-menu pull-left user_dropdown">
+                                <div class="user_head_name_contain">
+                                    <div class="user_contain">
+                                        <img class="img-circle" src="{{ head_image }}" style="height: 150px;width: 150px;">
+                                    </div>
+                                    <div class="user_contain">
+                                        <p class="user_name">{{ username }}</p>
+                                    </div>
+                            </div>
+                            <div class="row" style="margin-left: 15px;margin-right: 15px;margin-top: 10px">
+                                    <div class="col-7"></div>
+                                    <div class="col-5">
+                                        <a class="btn btn-sm btn-outline-success my-2 my-sm-0" href="{% url 'logout' %}" id="logout" role="button">退出登录</a>
+                                    </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+        </div>&nbsp;&nbsp;
+
     {% else %}
           <a class="btn btn-sm btn-outline-success my-2 my-sm-0" href="{% url 'login' %}" role="button">登录</a>&nbsp;&nbsp;
-          <a class="btn btn-sm btn-outline-success my-2 my-sm-0" href="{% url 'register' %}" role="button">注册</a>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a class="btn btn-sm btn-outline-success my-2 my-sm-0" href="{% url 'register' %}" role="button">注册</a>&nbsp;&nbsp;
     {% endif %}
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">

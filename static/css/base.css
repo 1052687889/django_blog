@@ -1,3 +1,36 @@
 body{
     background-color: #ffffff;
 }
+
+.user_head_img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.user_name{
+    white-space:nowrap;
+    overflow:hidden;
+    color: #000000;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.user_dropdown{
+    background: #FFFFFF;
+    width: 320px;
+    overflow: hidden;
+}
+
+.user_head_name_contain{
+     margin-top: 16px;
+    border-bottom: 1px solid #eeeeee
+}
+
+.user_contain{
+    color: #323534;
+    text-align: center;
+    line-height: 36px;
+    font-size: 15px;
+}
+

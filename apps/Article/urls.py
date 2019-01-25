@@ -4,7 +4,7 @@
 
 import xadmin
 from django.urls import path
-from .views import category,blog,loadArticle,article,tag,_date
+from .views import category,blog,loadArticle,article,tag,_date,comment
 
 urlpatterns = [
     path('',blog.as_view(),name='blog'),
@@ -16,6 +16,7 @@ urlpatterns = [
     path('category/<int:_id>/loadArticle/',loadArticle.as_view()),
     path('tag/<int:_id>/loadArticle/',loadArticle.as_view()),
     path('date/<int:year>/<int:month>/loadArticle/', loadArticle.as_view()),
+    path('comment/',comment.as_view()),
 ]
 
 
