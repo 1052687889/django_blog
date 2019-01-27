@@ -13,3 +13,12 @@
     float: right;
 }
 
+#textarea1{
+    height: 200px;
+    width: 100%;
+    resize: none;
+}
+.fixedbox-on{
+    position: fixed;
+    top: 0;z-index: 999;
+}

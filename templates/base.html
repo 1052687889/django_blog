@@ -26,8 +26,8 @@
             <li class="nav-item active">
                 <a class="nav-link" href="{% url 'home' %}">首页<span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item dropdown active">
-                <a class="nav-link dropdown-toggle" href="{% url 'blog' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">博客</a>
+            <li class="nav-item dropdown active" id="nav_blog">
+                <a class="nav-link dropdown-toggle" href="{% url 'blog' %}" data-toggle="dropdown">博客</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="{% url 'blog' %}">全部</a>
                     {% for id,name,total in  group %}
@@ -43,7 +43,7 @@
             </li>
         </ul>
     {% if request.user.is_authenticated %}
-        <div class="left">
+        <div id="user_opt">
                     <ul class="nav navbar-nav">
                         <li class="dropdown">
                             <a href="" class="dropdown-toggle" data-toggle="dropdown">

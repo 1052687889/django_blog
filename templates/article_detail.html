@@ -53,14 +53,21 @@
 
         </div>
     <br>
-    {% if request.user.is_authenticated %}
-         <div class="card shadow-lg">
-              <div class="card-body">
-                    <textarea id="textarea1" style="height: 200px; width: 100%;" placeholder="您有什么想法要说的吗？" spellcheck="false"></textarea>
+
+     <div class="card shadow-lg">
+          <div class="card-body">
+              <h4>提交评论:</h4>
+              {% if request.user.is_authenticated %}
+                  {% csrf_token %}
+                  <textarea id="textarea1" placeholder="您有什么想法要说的吗？" spellcheck="false"></textarea>
                   <button class="btn  btn-primary my-2 my-sm-0" id="submit_comment_button">提交评论</button>
-              </div>
-         </div>
-    {% endif %}
+              {% else %}
+                  <textarea id="textarea1" disabled="disabled" placeholder="为防止垃圾评论，请登录后在评论。>_<" spellcheck="false"></textarea>
+                  <button class="btn  btn-primary my-2 my-sm-0" id="submit_comment_button" disabled="disabled">提交评论</button>
+              {% endif %}
+          </div>
+     </div>
+
     </div>
 
     <div class="col-xl-2" id="article_right">
@@ -123,7 +130,9 @@
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </div>
-
+<div class="to_top"><img  class="to_top_img" src="{% static 'image/to_top.jpg' %}"/>
+    <a href="" id="btn"></a>
+</div>
 
 
 

@@ -119,13 +119,13 @@ class article(View):
             context['content'] = article.content
             context.update(QuertBaseData(request))
         except Exception as e:
-            print(e)
             return render(request, '404.html', context=context)
         return render(request, 'article_detail.html',context=context)
 
 
 class comment(View):
     def post(self,request):
+        print(request.POST)
         if request.POST:
             s_ype = request.POST['id']
             numb = request.POST['comment']
