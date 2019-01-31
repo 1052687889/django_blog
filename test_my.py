@@ -10,3 +10,13 @@
 #
 #
 # print(r)
+import datetime
+# d = datetime.datetime.now()
+# '%d年%d月%d日 %2d:%2d'%(d.date().year,d.date().month,comm.pub.date().day,comm.pub.time().hour,comm.pub.time().hour)
+import redis
+rcon = redis.StrictRedis(host='118.31.173.223', port=6379, db=10)
+rcon.set('xes_api_status', 1)
+rcon.set('hkes_api_status', 1)
+
+        # if not rcon.set('hkes_api_status', 'False'):
+        #     logger.error('redis writing error!!!')

@@ -1,0 +1,18 @@
+<div class="comment_box">
+    <div class="comment_box_head">
+        <img class="comment_box_img" src="{{ media_url }}/{{ comment.user.image }}" alt="">
+        <h6 style="float: left">&nbsp;&nbsp;{{ i }}楼&nbsp;&nbsp;{{ comment.user.username }}:</h6>
+        <span style="float: right">&nbsp;&nbsp;{{ comment.pub }}</span>
+    </div>
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10">{{ comment.content }}</div>
+        <div class="col-1"></div>
+    </div>
+    <p align="right">
+        <a href="#">点赞({{ comment.zan_num }})</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#">回复(0)</a>
+    </p>
+</div>
+<hr>

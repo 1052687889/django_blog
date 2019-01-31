@@ -5,10 +5,10 @@
 {% endblock %}
 {% block other %}
     <script src="{% static 'js/article_list.js' %}"></script>
-        <link rel="stylesheet" href="{% static 'css/article_list.css' %}">
+    <link rel="stylesheet" href="{% static 'css/article_list.css' %}">
 {% endblock %}
 {% block content %}
-    <br>
+<br>
 <div class="row">
     <div class="col-xl-1"></div>
 
@@ -34,7 +34,7 @@
           <h5 class="card-header">分类</h5>
           <div class="card-body">
               {% for id,name,total in  group %}
-                        <h5>&nbsp;<a href="{% url 'blog' %}category/{{ id }}"  class="badge">{{ name|truncatechars:15 }}({{ total }})</a></h5>
+                        <h5><a href="{% url 'blog' %}category/{{ id }}"  class="badge">{{ name|truncatechars:15 }}({{ total }})</a></h5>
                 {% endfor %}
           </div>
         </div>
@@ -43,7 +43,7 @@
           <h5 class="card-header">标签</h5>
           <div class="card-body">
               {% for id,title_info in  tags.items %}
-                   <a href="{% url 'blog' %}tag/{{ id }}/" class="badge badge-{{ title_info.1 }}">{{ title_info.0 }}</a>&nbsp;&nbsp;
+                   <a href="{% url 'blog' %}tag/{{ id }}/" class="badge badge-{{ title_info.1 }}">{{ title_info.0 }}</a>
               {% endfor %}
           </div>
         </div>
@@ -69,28 +69,23 @@
             <div class="card shadow-lg">
           <h5 class="card-header">最新评论</h5>
           <div class="card-body">
+            {% for i,comment in new_comment %}
+                <div>
+                    <h6><a href="{% url 'blog' %}article/{{ comment.blog.id }}">{{ i }}.Re:{{ comment.blog.title }}</a></h6>
+                    <p style="margin:0px;">{{ comment.content }}</p>
+                    <p style="font-size: small" align="right"> --{{ comment.user }}</p>
+                </div>
+            {% endfor %}
           </div>
         </div>
     <br>
     </div>
     <div class="col-1"></div>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </div>
 
-
-
-
-
-
-
-
-
-
-
+<div id="back-to-top" title="回到顶部">
+    <a href=""><img  class="to_top_img" src="{% static 'image/to_top.jpg' %}"/></a>
+</div>
 {% endblock %}
 
 

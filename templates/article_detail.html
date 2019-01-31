@@ -7,15 +7,17 @@
 
 <link rel="stylesheet" href="{% static 'css/article_detail.css' %}">
 <link rel="stylesheet" href="{% static 'css/prism.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'emoji/css/emojionearea-2.1.3.min.css' %}">
+<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/emojione/2.1.1/assets/sprites/emojione.sprites.css">
+<script type="text/javascript" src="http://cdn.bootcss.com/emojione/2.1.1/lib/js/emojione.min.js"></script>
+<script type="text/javascript" src="{% static 'emoji/js/emojionearea-2.1.3.min.js' %}"></script>
 <script src="{% static 'ckeditor/ckeditor/plugins/prism/lib/prism/prism_patched.min.js' %}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 <script src="{% static 'js/article_detail.js' %}"></script>
 {% endblock %}
 {% block content %}
-    <br>
+<br>
 <div class="row">
     <div class="col-xl-1"></div>
-
     <div class="col-xl-8" id="article_list">
         <div class="card shadow-lg">
           <div class="card-body" id="article_body">
@@ -67,7 +69,33 @@
               {% endif %}
           </div>
      </div>
-
+        <br>
+     <div class="card shadow-lg">
+          <div id="comment_display" class="card-body" style="padding: 50px;">
+              <h4>评论:</h4>
+              <hr>
+              {% if comments %}
+                  {% for i,comment in comments %}
+                      <div class="comment_box">
+                          <div class="comment_box_head">
+                              <img class="comment_box_img" src="{{ media_url }}/{{ comment.user.image }}" alt="">
+                              <h6 style="float: left">&nbsp;&nbsp;{{ i }}楼&nbsp;&nbsp;{{ comment.user.username }}:</h6>
+                              <span style="float: right">&nbsp;&nbsp;{{ comment.pub }}</span>
+                          </div>
+                          <div class="row">
+                              <div class="col-1"></div>
+                              <div class="col-10">{{ comment.content }}</div>
+                              <div class="col-1"></div>
+                          </div>
+                        <p align="right"><a href="#">点赞({{ comment.zan_num }})</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">回复(0)</a></p>
+                      </div>
+                      <hr>
+                  {% endfor %}
+              {% else %}
+                  <p align="center">暂无评论,敬请期待.</p>
+              {% endif %}
+          </div>
+     </div>
     </div>
 
     <div class="col-xl-2" id="article_right">
@@ -119,28 +147,22 @@
             <div class="card shadow-lg">
           <h5 class="card-header">最新评论</h5>
           <div class="card-body">
+              {% for i,comment in new_comment %}
+                <div>
+                    <h6><a href="{% url 'blog' %}article/{{ comment.blog.id }}">{{ i }}.Re:{{ comment.blog.title }}</a></h6>
+                    <p style="margin:0px;">{{ comment.content }}</p>
+                    <p style="font-size: small" align="right"> --{{ comment.user }}</p>
+                </div>
+            {% endfor %}
           </div>
         </div>
     <br>
     </div>
     <div class="col-1"></div>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </div>
-<div class="to_top"><img  class="to_top_img" src="{% static 'image/to_top.jpg' %}"/>
-    <a href="" id="btn"></a>
+<div id="back-to-top" title="回到顶部">
+    <a href=""><img  class="to_top_img" src="{% static 'image/to_top.jpg' %}"/></a>
 </div>
-
-
-
-
-
-
-
-
-
+<br>
 
 {% endblock %}

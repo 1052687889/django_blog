@@ -17,7 +17,11 @@ class ArticleAdmin(object):
 
 
 class CommentAdmin(object):
-    list_display = ["name",]
+    # blog=models.ForeignKey(Article,verbose_name='博客',on_delete=models.DO_NOTHING)#(博客--评论:一对多)
+    # user=models.ForeignKey(UserProfile,verbose_name='用户',on_delete=models.DO_NOTHING)
+    # content=models.CharField('内容',max_length=240)
+    # pub=models.DateField('发布时间',auto_now_add=True)
+    list_display = ["blog","user","content","pub"]
 
 xadmin.site.register(Tag, TagAdmin)
 xadmin.site.register(Category, CategoryAdmin)

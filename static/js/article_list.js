@@ -26,19 +26,7 @@ $(window).scroll(function(){
  }
 });
 
-/*自定义字符串格式化*/
-String.prototype.Format = function (args) {
-    /*this代表要调用Format方法的字符串*/
-    /*replace的第一个参数为正则表达式，g表示处理匹配到的所有字符串，在js中使用//包起来*/
-    /*replace的第二个参数为匹配字符串的处理，k1匹配结果包含{}，k2只保留{}内的内容*/
-    var temp = this.replace(/\{(\w+)\}/g, function (k1, k2) {
-    // console.log(k1, k2);
-    /*replace将匹配到的k2用参数args替换后赋给新变量temp*/
-    return args[k2];
-    });
-    /*自定义方法Format将格式化后的字符串返回*/
-    return temp;
-}
+
 
 function get_link_type() {
     try{

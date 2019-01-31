@@ -1,15 +1,15 @@
 from django.shortcuts import render
-from django.http.response import Http404,JsonResponse
+from django.http.response import HttpResponse,JsonResponse
 
 # Create your views here.
 
 from django.views import View
 from django.conf import settings
 import datetime
-from apps.Article.models import Article,Category,Tag,QuertBaseData
+from apps.Article.models import Article,Category,Tag,QuertBaseData,Comment
 from lxml import etree
-
-
+from apps.users.models import UserProfile
+from django.template import loader
 
 class category(View):
     def get(self, request,_id):
@@ -110,6 +110,7 @@ class article(View):
         article = Article.objects.filter(id=_id).first()
         context['article_id'] = article.id
         context['title'] = article.title
+        comments = Comment.objects.filter(blog=article).order_by('pub').all()
         try:
             context['author'] = article.author
             context['article_read_num'] = article.read_num
@@ -117,7 +118,9 @@ class article(View):
             context['type'] = article.category
             context['tag'] = [tag.name for tag in article.tags.all()]
             context['content'] = article.content
+            context['comments'] = [(i+1,comment) for i,comment in enumerate(comments)]
             context.update(QuertBaseData(request))
+            context['media_url'] = settings.MEDIA_URL
         except Exception as e:
             return render(request, '404.html', context=context)
         return render(request, 'article_detail.html',context=context)
@@ -125,11 +128,25 @@ class article(View):
 
 class comment(View):
     def post(self,request):
-        print(request.POST)
         if request.POST:
-            s_ype = request.POST['id']
-            numb = request.POST['comment']
-            return render(request, '404.html', context={})
-        else:
-            return render(request, '404.html', context={})
-        pass
+            _id = request.POST['id']
+            comment = request.POST['comment']
+            art = Article.objects.filter(id=_id).first()
+            user = UserProfile.objects.filter(username=request.user).first()
+            if art and user:
+                comm = Comment(blog=art,user=user,content=comment)
+                comm.save()
+                num = Comment.objects.filter(blog=art).count()
+                res = loader.render_to_string("comment.html",{"comment": comm,'i':num,'media_url':settings.MEDIA_URL})
+                print(comm.pub)
+                print(comm.pub.strftime('%Y{y}%m{m}%d{d} %H{h}%M{f}%S{s}').format(y='年',m='月',d='日',h='时',f='分',s='秒'))
+                print(comm.pub.year,comm.pub.month,comm.pub.day,comm.pub.hour,comm.pub.minute)
+                return HttpResponse(res)
+                # return JsonResponse({'username':user.username,
+                #                      'content':comm.content,
+                #                      'date':'%d年%d月%d日 %2d:%2d'%(comm.pub.year,comm.pub.month,comm.pub.day,comm.pub.hour,comm.pub.minute),#comm.pub.strftime('%Y年%m月%d日 %h:%s'),
+                #                      'head_image_url':settings.MEDIA_URL+'/'+str(comm.user.image),
+                #                      'zan_num':comm.zan_num,
+                #                      'num':num})
+        return render(request, '404.html', context={})
+

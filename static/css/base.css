@@ -34,29 +34,18 @@ body{
     font-size: 15px;
 }
 
-.to_top{
-    /*position:fixed;*/
-    /*left:0;*/
-    /*top:0;*/
-    /*color: #0095dd;*/
-    width:1000px;
-    margin:  0  auto;
-}
-#btn {
-    width:40px;
-    height: 40px;
-    position:fixed;
-    left:50%;
-    bottom:30px;
-    background:no-repeat left top ;
-    margin-left: 610px;
-}
-#btn:hover {
-    background:no-repeat  left -40px;
-}
 .to_top_img{
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     border-radius: 50px;
     display: block;
 }
+#back-to-top{
+    position:fixed;
+    display:none;
+    bottom:100px;
+    right:80px;
+}
+
+
+

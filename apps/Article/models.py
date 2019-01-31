@@ -1,15 +1,13 @@
 from django.db import models
 
 # Create your models here.
-from datetime import datetime
-from django.db.models import Count
 from django.db import models
 from django.db.models import Count
 from django.db.models.functions import ExtractYear,ExtractMonth
 from django.conf import settings
 from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
-
+from apps.users.models import UserProfile
 class Tag(models.Model):
     '''
     博客标签
@@ -72,17 +70,16 @@ class Comment(models.Model):
     博客评论
     '''
     blog=models.ForeignKey(Article,verbose_name='博客',on_delete=models.DO_NOTHING)#(博客--评论:一对多)
-    name=models.CharField('称呼',max_length=16)
-    email=models.EmailField('邮箱')
+    user=models.ForeignKey(UserProfile,verbose_name='用户',on_delete=models.DO_NOTHING)
     content=models.CharField('内容',max_length=240)
-    pub=models.DateField('发布时间',auto_now_add=True)
-
+    pub=models.DateTimeField('发布时间',auto_now_add=True)
+    zan_num = models.IntegerField(verbose_name='点赞数',default=0)
     class Meta:
         verbose_name="评论"
         verbose_name_plural="评论"
 
     def __str__(self):
-        return self.name + ':' + self.name
+        return self.blog.title + ':' + self.user.username+':'+self.content+':'+str(self.pub)
 
 
 
@@ -100,12 +97,14 @@ def QuertBaseData(request):
     _date = Article.objects.annotate(year=ExtractYear('create_time'), month=ExtractMonth('create_time')).values('year', 'month').annotate(nums=Count('create_time'))
     group = Article.objects.all().values('category', 'category__name').annotate(total=Count('category')).order_by('total')
     read_num_article_list = Article.objects.all().order_by('-read_num')[0:5]
+    new_comments = Comment.objects.all().order_by("-pub")[0:5]
     context['tags'] = {tag.id: [tag.name, settings.TAG_COLOR_LIST[index % len(settings.TAG_COLOR_LIST)]] for index, tag in enumerate(tags)}
     context['new_article_list'] = {article.id: article.title for article in new_article_list}
     context['article_types'] = {category['category']: category['category__name'] for category in group}
     context['date'] = [(d['year'], d['month'], d['nums']) for d in _date]
     context['group'] = [(category['category'], category['category__name'], category['total']) for category in group]
     context['read_num'] = [(d.id, d.title, d.read_num) for d in read_num_article_list]
+    context['new_comment'] = [(i+1,new_comment) for i,new_comment in enumerate(new_comments)] #[(i+1,new_comment.user,new_comment.blog.id,new_comment.blog.title,new_comment.content,new_comment.pub) for i,new_comment in enumerate(new_comments)]
     return context
 
 
