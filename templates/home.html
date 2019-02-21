@@ -5,61 +5,71 @@
 
 {% block content %}
 <div id="demo" class="carousel slide" data-ride="carousel">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-            <a href="#">
-                <img src="http://static.runoob.com/images/mix/img_mountains_wide.jpg" class="d-block w-100" alt="...">
-                          <div class="carousel-caption d-none d-md-block">
-        <h5>第一张图片</h5>
-        <p>1111111111111111111111</p>
-      </div>
-            </a>
-        </div>
-        <div class="carousel-item">
-            <a href="#">
-                <img src="http://static.runoob.com/images/mix/img_fjords_wide.jpg" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-none d-md-block">
-        <h5>第二张图片</h5>
-        <p>22222222222222222222</p>
-      </div>
-            </a>
-
-        </div>
-        <div class="carousel-item">
-            <a href="#">
-                <img src="http://static.runoob.com/images/mix/img_nature_wide.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-        <h5>第三张图片</h5>
-        <p>33333333333333333333</p>
-      </div>
-            </a>
-
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+{#    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">#}
+{#      <ol class="carousel-indicators">#}
+{#        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>#}
+{#        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>#}
+{#        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>#}
+{#      </ol>#}
+{#      <div class="carousel-inner">#}
+{#        <div class="carousel-item active">#}
+{#            <a href="#">#}
+{#                <img src="http://static.runoob.com/images/mix/img_mountains_wide.jpg" class="d-block w-100" alt="...">#}
+{#                          <div class="carousel-caption d-none d-md-block">#}
+{#        <h5>第一张图片</h5>#}
+{#        <p>1111111111111111111111</p>#}
+{#      </div>#}
+{#            </a>#}
+{#        </div>#}
+{#        <div class="carousel-item">#}
+{#            <a href="#">#}
+{#                <img src="http://static.runoob.com/images/mix/img_fjords_wide.jpg" class="d-block w-100" alt="...">#}
+{#                  <div class="carousel-caption d-none d-md-block">#}
+{#        <h5>第二张图片</h5>#}
+{#        <p>22222222222222222222</p>#}
+{#      </div>#}
+{#            </a>#}
+{##}
+{#        </div>#}
+{#        <div class="carousel-item">#}
+{#            <a href="#">#}
+{#                <img src="http://static.runoob.com/images/mix/img_nature_wide.jpg" class="d-block w-100" alt="...">#}
+{#                <div class="carousel-caption d-none d-md-block">#}
+{#        <h5>第三张图片</h5>#}
+{#        <p>33333333333333333333</p>#}
+{#      </div>#}
+{#            </a>#}
+{##}
+{#        </div>#}
+{#      </div>#}
+{#      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">#}
+{#        <span class="carousel-control-prev-icon" aria-hidden="true"></span>#}
+{#        <span class="sr-only">Previous</span>#}
+{#      </a>#}
+{#      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">#}
+{#        <span class="carousel-control-next-icon" aria-hidden="true"></span>#}
+{#        <span class="sr-only">Next</span>#}
+{#      </a>#}
+{#    </div>#}
+    <div class="row">
+    <div class="col-1"></div>
+    <div class="col-10 shadow-lg" style="background-color: #969896;height: 500px;">
+        <br>
+        <br>
     </div>
+    <div class="col-1"></div>
+    </div>
+
+
     <div class="row">
     <div class="col-2"></div>
     <div class="col-8">
         <div class="jumbotron">
-            <h1 class="display-4">欢迎来到饕客的博客</h1>
-            <p class="lead">这是我的博客</p>
+            <h1 class="display-4">欢迎来到我的博客</h1>
+            <p class="lead">这是饕客的博客</p>
             <hr class="my-2">
-            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+            <p>这是我的个人博客，开始于2018年12月19日，想建立一个自己的IT后花园。</p>
+            <a class="btn btn-primary btn-lg" href="{% url 'blog' %}" role="button">随便看看</a>
         </div>
     </div>
     <div class="col-2"></div>

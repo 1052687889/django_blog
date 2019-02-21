@@ -16,7 +16,7 @@ Including another URLconf
 
 import xadmin
 from django.urls import path,re_path,include
-from .views import Home,page_not_found
+from .views import Home,page_not_found,js_test
 from django.views.static import serve
 from .settings import MEDIA_ROOT
 from django.conf.urls.static import static
@@ -32,6 +32,7 @@ urlpatterns = [
     path('blog/', include('Article.urls')),
     path('about/',include('aboutme.urls')),
     path('users/',include('users.urls')),
+    path('js_test/',js_test)
 ]
 # urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 handler404 = 'page_not_found'

@@ -75,3 +75,7 @@ String.prototype.Format = function (args) {
     return temp;
 }
 
+function func_invalid() {
+    alert("功能尚未开发，敬请期待。")
+}
+

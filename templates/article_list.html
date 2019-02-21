@@ -71,8 +71,12 @@
           <div class="card-body">
             {% for i,comment in new_comment %}
                 <div>
-                    <h6><a href="{% url 'blog' %}article/{{ comment.blog.id }}">{{ i }}.Re:{{ comment.blog.title }}</a></h6>
-                    <p style="margin:0px;">{{ comment.content }}</p>
+                    <h5><a href="{% url 'blog' %}article/{{ comment.blog.id }}" class="badge">{{ i }}.Re:{{ comment.blog.title|truncatechars:15 }}</a></h5>
+                    <p style="margin:0px;">
+                        {% autoescape off %}
+                            {{ comment.content }}
+                        {% endautoescape %}
+                    </p>
                     <p style="font-size: small" align="right"> --{{ comment.user }}</p>
                 </div>
             {% endfor %}

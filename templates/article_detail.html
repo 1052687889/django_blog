@@ -84,10 +84,14 @@
                           </div>
                           <div class="row">
                               <div class="col-1"></div>
-                              <div class="col-10">{{ comment.content }}</div>
+                              <div class="col-10">
+                                  {% autoescape off %}
+                                    {{ comment.content }}
+                                 {% endautoescape %}
+                              </div>
                               <div class="col-1"></div>
                           </div>
-                        <p align="right"><a href="#">点赞({{ comment.zan_num }})</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">回复(0)</a></p>
+                        <p align="right"><a href="javascript:void(0);" id="comment_{{ comment.id }}">点赞({{ comment.zan_num }})</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" onclick="func_invalid()">回复(0)</a></p>
                       </div>
                       <hr>
                   {% endfor %}
@@ -149,8 +153,12 @@
           <div class="card-body">
               {% for i,comment in new_comment %}
                 <div>
-                    <h6><a href="{% url 'blog' %}article/{{ comment.blog.id }}">{{ i }}.Re:{{ comment.blog.title }}</a></h6>
-                    <p style="margin:0px;">{{ comment.content }}</p>
+                    <h5><a href="{% url 'blog' %}article/{{ comment.blog.id }}" class="badge">{{ i }}.Re:{{ comment.blog.title|truncatechars:15 }}</a></h5>
+                    <p style="margin:0px;">
+                        {% autoescape off %}
+                            {{ comment.content }}
+                         {% endautoescape %}
+                    </p>
                     <p style="font-size: small" align="right"> --{{ comment.user }}</p>
                 </div>
             {% endfor %}

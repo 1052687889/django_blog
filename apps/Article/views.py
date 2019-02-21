@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http.response import HttpResponse,JsonResponse
+from django.http.response import HttpResponse,JsonResponse,Http404
 
 # Create your views here.
 
@@ -10,6 +10,7 @@ from apps.Article.models import Article,Category,Tag,QuertBaseData,Comment
 from lxml import etree
 from apps.users.models import UserProfile
 from django.template import loader
+import hashlib
 
 class category(View):
     def get(self, request,_id):
@@ -106,8 +107,14 @@ class loadArticle(View):
 
 class article(View):
     def get(self,request,_id):
+        salt = 'article'
         context = {}
         article = Article.objects.filter(id=_id).first()
+        try:
+            request.get_signed_cookie(hashlib.md5(article.title.encode('utf-8')).hexdigest(),salt=salt)
+        except KeyError:
+            article.read_num += 1
+        article.save()
         context['article_id'] = article.id
         context['title'] = article.title
         comments = Comment.objects.filter(blog=article).order_by('pub').all()
@@ -123,7 +130,9 @@ class article(View):
             context['media_url'] = settings.MEDIA_URL
         except Exception as e:
             return render(request, '404.html', context=context)
-        return render(request, 'article_detail.html',context=context)
+        response =  render(request, 'article_detail.html',context=context)
+        response.set_signed_cookie(hashlib.md5(article.title.encode('utf-8')).hexdigest(),True,salt=salt,max_age=60)
+        return response
 
 
 class comment(View):
@@ -138,15 +147,18 @@ class comment(View):
                 comm.save()
                 num = Comment.objects.filter(blog=art).count()
                 res = loader.render_to_string("comment.html",{"comment": comm,'i':num,'media_url':settings.MEDIA_URL})
-                print(comm.pub)
-                print(comm.pub.strftime('%Y{y}%m{m}%d{d} %H{h}%M{f}%S{s}').format(y='年',m='月',d='日',h='时',f='分',s='秒'))
-                print(comm.pub.year,comm.pub.month,comm.pub.day,comm.pub.hour,comm.pub.minute)
                 return HttpResponse(res)
-                # return JsonResponse({'username':user.username,
-                #                      'content':comm.content,
-                #                      'date':'%d年%d月%d日 %2d:%2d'%(comm.pub.year,comm.pub.month,comm.pub.day,comm.pub.hour,comm.pub.minute),#comm.pub.strftime('%Y年%m月%d日 %h:%s'),
-                #                      'head_image_url':settings.MEDIA_URL+'/'+str(comm.user.image),
-                #                      'zan_num':comm.zan_num,
-                #                      'num':num})
         return render(request, '404.html', context={})
+
+class comment_zan(View):
+    def get(self,request,_id):
+        try:
+            comment_id = request.GET['comment_id']
+            article_id = request.GET['article_id']
+            res = Comment.objects.filter(id=comment_id).filter(blog__id=article_id).first()
+            res.zan_num += 1
+            res.save()
+            return JsonResponse({'zan_num':res.zan_num})
+        except IndexError:
+            return Http404()
 
